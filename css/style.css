@@ -87,12 +87,27 @@
  }
  
  .scroll-to-top:hover {
-     background: #343a40
+    -webkit-animation: changeBg 2.4s forwards;
+    animation: changeBg 2.4s forwards;
  }
  
  .scroll-to-top i {
      font-weight: 800
  }
+
+ #bg-main { background-image: url("../img/bg-masthead.jpg");}
+ #bg-main:after { background-image: url("../img/bg-overlay.svg");}
+
+ #bg-ds { background-image: url("../img/bg-ds.jpg");}
+ #bg-ds:after { background-image: url("../img/bg-ds-overlay.svg");}
+
+
+ #bg-s1 { background-image: url("../img/bg-s1.jpg");background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover}
+ #bg-s2 { background-image: url("../img/bg-s2.jpg");}
+ #bg-s3 { background-image: url("../img/bg-s3.jpg");}
+ #bg-s4 { background-image: url("../img/bg-s4.jpg");}
  
  .masthead:after {
      content: "";  
@@ -101,7 +116,6 @@
      left: 0;
      width: 100%;
      height: 100%;
-     background-image: url("../img/bg-overlay.svg");
      background-size: cover;
      opacity: .75;
    }
@@ -118,7 +132,6 @@
      margin-top: -150px;
      padding-top: 8rem;
      padding-bottom: 8rem;
-     background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/bg-masthead.jpg);
      background-position: center center;
      background-repeat: no-repeat;
      background-size: cover
@@ -136,7 +149,7 @@
  
  @media (min-width:992px) {
      .masthead {
-         height: 100vh
+         height: 110vh
      }
      .masthead h1 {
          font-size: 5.5rem
@@ -239,18 +252,19 @@
  
  .service-icon {
      background-color: #fff;
-     height: 540px;
      display: block;
+     padding: 15px;
      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .1)
  }
  
  .service-icon ul {
  
-     height:250px;
-     margin-right: 20px;
+     height:280px;
+     padding-left:25px;
  }
  
  .service-icon li {
+     margin-bottom:8px;
      text-align: left;
  }
  
@@ -339,6 +353,55 @@
          clip-path: inset(2rem)
      }
  }
+
+ .carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #999;
+	overflow: hidden;
+    min-height: 120px;
+    font-size: 18px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.carousel .media img {
+	width: 180px;
+    display: block;
+    margin-top:5px;
+}
+.carousel .testimonial {
+	padding: 0 0 0 10px ;
+	position: relative;
+}
+.carousel .testimonial::before {
+	content: '\93';
+	color: #e2e2e2;
+	font-weight: bold;
+	font-size: 68px;
+	line-height: 54px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 18px;
+    height: 18px;
+	border-radius: 50%;
+	margin: 1px 3px;
+}
+.carousel-indicators li {	
+    background: #e2e2e2;
+    border: 4px solid #fff;
+}
+.carousel-indicators li.active {
+	background: #616161;      
+}
  
  footer.footer {
      padding-top: 5rem;
@@ -419,6 +482,10 @@
  .bg-primary {
      background-color: #1d809f !important
  }
+
+ .bg-earth20 {
+    background-color: #ebf1ef !important
+}
  
  .bg-footer {
      background-image: url("../img/bg-footer.jpg");
@@ -466,7 +533,7 @@
    }
  
    .social-icons .fab {
-       padding-left:20px;
+       padding-left:10px;
    }
    .footer-icons .fab {
      padding-right:10px;
@@ -492,15 +559,26 @@
  #fire {
      background-color: rgb(235, 103, 81);
  }
- 
+ .text-fire {
+    color: rgb(235, 103, 81);
+ }
  #earth {
      background-color: rgb(154, 185, 173);
+ }
+ .text-earth {
+    color: rgb(154, 185, 173);
  }
  #water {
      background-color: rgb(164, 198, 211);
  }
+ .text-water {
+    color: rgb(164, 198, 211);
+ }
  #air {
      background-color: rgb(182, 180, 223);
+ }
+ .text-water {
+    color: rgb(182, 180, 223);
  }
  
  .numscroller{
@@ -523,6 +601,7 @@
      
  }
  
+ 
  .card-body {
      padding:0px;
      margin: 20px;
@@ -534,7 +613,7 @@
  }
  
  .bg-blog{
-     background-image:url("../img/blog/blog-image.png");
+     background-image:url("../img/blog/blog-image.jpg");
      background-size: cover;
  }
  
@@ -614,7 +693,11 @@
  .vat-info {
      font-size: 9px;
  }
- 
+
+.services-3-col {
+    border-right: 1px solid #616161;
+}
+
  .newsletter {
      max-width: 400px;
      position: relative;
