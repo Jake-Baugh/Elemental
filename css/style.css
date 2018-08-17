@@ -101,13 +101,21 @@
  #bg-ds { background-image: url("../img/bg-ds.jpg");}
  #bg-ds:after { background-image: url("../img/bg-ds-overlay.svg");}
 
+ #bg-mc { background-image: url("../img/bg-mc.jpg");}
+ #bg-mc:after { background-image: url("../img/bg-mc-overlay.svg");}
 
  #bg-s1 { background-image: url("../img/bg-s1.jpg");background-position: center center;
     background-repeat: no-repeat;
     background-size: cover}
- #bg-s2 { background-image: url("../img/bg-s2.jpg");}
- #bg-s3 { background-image: url("../img/bg-s3.jpg");}
- #bg-s4 { background-image: url("../img/bg-s4.jpg");}
+ #bg-s2 { background-image: url("../img/bg-s2.jpg");background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover}
+ #bg-s3 { background-image: url("../img/bg-s3.jpg");background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover}
+ #bg-s4 { background-image: url("../img/bg-s4.jpg");background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover}
  
  .masthead:after {
      content: "";  
@@ -486,6 +494,18 @@
  .bg-earth20 {
     background-color: #ebf1ef !important
 }
+
+.bg-fire20 {
+    background-color: #ebf1ef !important
+}
+
+.bg-water20 {
+    background-color: #edf4f6 !important
+}
+
+.bg-air20 {
+    background-color: #ebf1ef !important
+}
  
  .bg-footer {
      background-image: url("../img/bg-footer.jpg");
@@ -577,7 +597,7 @@
  #air {
      background-color: rgb(182, 180, 223);
  }
- .text-water {
+ .text-air {
     color: rgb(182, 180, 223);
  }
  
