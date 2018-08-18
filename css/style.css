@@ -884,6 +884,19 @@
    }
  }
  
+ .navbar-brand img {
+    width: 250px;
+  }
+
+ @media screen and (max-width: 768px) {
+    .navbar-brand img {
+      width: 200px;
+    }
+    .navmenu {
+        width: 260px !important;
+    }
+}
+
  .navmenu-fixed-right {left: auto !important;}
  .navbar-toggle {left: auto !important;}
  body.canvas-sliding, body.canvas-slid {left: auto !important;}
