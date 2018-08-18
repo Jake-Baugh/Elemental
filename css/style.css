@@ -104,6 +104,12 @@
  #bg-mc { background-image: url("../img/bg-mc.jpg");}
  #bg-mc:after { background-image: url("../img/bg-mc-overlay.svg");}
 
+ #bg-pr { background-image: url("../img/bg-pr.jpg");}
+ #bg-pr:after { background-image: url("../img/bg-pr-overlay.svg");}
+
+ #bg-sa { background-image: url("../img/bg-sa.jpg");}
+ #bg-sa:after { background-image: url("../img/bg-sa-overlay.svg");}
+
  #bg-s1 { background-image: url("../img/bg-s1.jpg");background-position: center center;
     background-repeat: no-repeat;
     background-size: cover}
