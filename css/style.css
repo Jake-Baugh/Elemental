@@ -885,22 +885,17 @@
  }
 
 .vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    border-bottom: 1px solid #dedede;
+    background-color: #fafafa; /* Grey background color */
+    border-bottom: 1px solid #eee;
     color: #777; /* Black text color */
     display: block; /* Make the links appear below each other */
-    padding: 20px; /* Add some padding */
-    font-size: 20px;
+    padding: 18px; /* Add some padding */
+    font-size: 16px;
     text-decoration: none; /* Remove underline from links */
 }
 
-.vertical-menu a:hover {
-    -webkit-animation: changeBg 2.4s forwards;
-    animation: changeBg 2.4s forwards;
-}
-
 .vertical-menu a.active {
-    background-color: #ccc; /* Add a green color to the "active/current" link */
+    background-color: #ddd; /* Add a green color to the "active/current" link */
     color: white;
 }
 
