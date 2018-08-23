@@ -921,6 +921,86 @@
  .navbar-toggle {left: auto !important;}
  body.canvas-sliding, body.canvas-slid {left: auto !important;}
  
+ .icon-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) ;
+    }
+  }
+  
+  .text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
  
  
  @-webkit-keyframes changeColor{
@@ -949,3 +1029,110 @@
          100%{background-color:rgb(182, 180, 223);border-color:rgb(182, 180, 223);}
          }
  
+
+         .title {
+            position:absolute;
+            top:-42px;
+            font-size:16px;
+         }
+        
+         .title h2 {
+             font-size: 1em;
+         }
+        
+         .scroller {
+             position:absolute;
+             bottom:40px;
+             left:48.75%
+         }
+
+         /*==================================================
+=            Bootstrap Media Queries             =
+==================================================*/
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .title {
+            position:absolute;
+            top:-32px;
+            padding-left:0px;
+            
+         }
+         .title h2 {
+            font-size:32px;
+         }
+         .title h3 {
+            font-size:28px;
+         }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .title {
+            position:absolute;
+            top:-42px;
+            padding-left:80px;
+            
+         }
+         .title h2 {
+            font-size:40px;
+         }
+         .title h3 {
+            font-size:36px;
+         }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .title {
+            position:absolute;
+            top:-42px;
+            padding-left:10px;
+            
+         }
+         .title h2 {
+            font-size:46px;
+         }
+         .title h3 {
+            font-size:42px;
+         }
+    }
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }
