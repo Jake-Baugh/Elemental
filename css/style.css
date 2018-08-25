@@ -110,6 +110,8 @@
  #bg-sa { background-image: url("../img/bg-sa.jpg");}
  #bg-sa:after { background-image: url("../img/bg-sa-overlay.svg");}
 
+ #bg-clients { background-image: url("../img/bg-sa.jpg");}
+
  #bg-s1 { background-image: url("../img/bg-s1.jpg");background-position: center center;
     background-repeat: no-repeat;
     background-size: cover}
@@ -150,6 +152,32 @@
      background-repeat: no-repeat;
      background-size: cover
  }
+
+ .masthead-small {
+    min-height: 2rem;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 80px;
+    margin-top: -150px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.masthead-small:after {
+    content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    background-size: cover;
+    opacity: .75;
+  }
  
  .masthead h1 {
      font-size: 4rem;
@@ -242,6 +270,9 @@
      transition: all .4s ease 0s
  }
  
+ .client-icon img {
+    width:100%;
+ }
  .menu-toggle {
      position: fixed;
      right: 15px;
@@ -1085,6 +1116,8 @@
         .scroller {
             left:48.5%;
         }
+
+       
        
     }
 
@@ -1108,6 +1141,8 @@
          .scroller {
             left:48.5%;
         }
+
+    
     }
 
     /* Medium Devices, Desktops */
