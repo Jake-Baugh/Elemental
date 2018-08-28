@@ -1,0 +1,43 @@
+<aside class="col-lg-4 p-3" style="background-color:#eee">
+  <!-- Widget [Latest Posts Widget]        -->
+  <div class="widget latest-posts mb-4">
+    <header>
+      <h3 class="h6">Latest Case Studies</h3>
+    </header>
+    <div class="blog-posts">
+      <cms:pages masterpage='case-study.php' limit='3' >
+      <div class="item d-flex align-items-center">
+        <div class="image"><img src="<cms:show cs_image />" alt="..." class="img-fluid"></div>
+        <div class="blog-title"><strong><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></strong>
+          <div class="d-flex align-items-center">
+            <div class="views"><cms:show cs_author /></div>
+            <div class="comments"><cms:show k_page_date /></div>
+          </div>
+        </div>
+      </div>
+      </cms:pages >
+    </div>
+  </div>
+  <<!-- Widget [Categories Widget]-->
+  <div class="widget categories mb-4">
+    <header>
+      <h3 class="h6">Categories</h3>
+    </header>
+    <cms:folders masterpage='case-study.php' >
+    <div class="item d-flex justify-content-between"><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a><span><cms:show k_folder_totalpagecount /></span></div>
+    </cms:folders>
+  </div>
+  <!-- Widget [Tags Cloud Widget]-->
+  <div class="widget tags">
+    <header>
+      <h3 class="h6">Tags</h3>
+    </header>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="tag">Tag 1</a></li>
+      <li class="list-inline-item"><a href="#" class="tag">Tag 2</a></li>
+      <li class="list-inline-item"><a href="#" class="tag">Tag 3</a></li>
+      <li class="list-inline-item"><a href="#" class="tag">Tag 4</a></li>
+      <li class="list-inline-item"><a href="#" class="tag">Tag 5</a></li>
+    </ul>
+  </div>
+</aside>
