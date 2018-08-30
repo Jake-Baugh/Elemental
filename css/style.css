@@ -85,8 +85,7 @@ aside {
   }
 
 .btn-toolbar .btn {
-    font-size:22px;
-    min-width: 120px;
+    min-width: 100px;
 }
 
  .btn-xl {
@@ -728,6 +727,10 @@ aside {
      font-size:14px;
      padding-top:14px;
  }
+
+ .text-black {
+     color:black;
+ }
  
  #fire {
      background-color: rgb(235, 103, 81);
@@ -1280,3 +1283,587 @@ aside {
     @media only screen and (max-width : 320px) {
 
     }
+
+
+
+
+
+
+
+
+    #first {
+        background: #495c6f url(http://www.1up.ee/realtyTopia/careers-header.png) no-repeat top/cover;
+      }
+      
+      .offer {
+        color: #fff;
+        padding-top: 165px;
+        padding-bottom: 162px;
+        width: 615px;
+        margin: 0 auto;
+      }
+      
+      @media screen and (max-width: 992px) {
+        #first {
+          background: #495c6f url(http://www.1up.ee/realtyTopia/careers-header.png) no-repeat 90%/cover;
+        }
+      
+        .offer {
+          width: 90%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #first {
+          background: #495c6f url(http://www.1up.ee/realtyTopia/careers-header.png) no-repeat 80%/cover;
+        }
+        #first p {
+          font-size: 18px;
+        }
+      
+        h1 {
+          font-size: 45px;
+        }
+      }
+      @media screen and (max-width: 540px) {
+        #first {
+          background: #495c6f url(http://www.1up.ee/realtyTopia/careers-header.png) no-repeat 80%/cover;
+        }
+        #first h1 {
+          font-size: 38px;
+        }
+        #first P {
+          font-size: 17px;
+        }
+      }
+      @media screen and (max-width: 430px) {
+        #first h1 {
+          font-size: 33px;
+        }
+      }
+      /* SECTION IMG */
+      #img {
+        position: relative;
+      }
+      #img img {
+        margin-top: 85px;
+        max-width: 100%;
+      }
+      #img .why {
+        color: #112233;
+        margin-top: 120px;
+      }
+      #img .why h2 {
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+      }
+      #img .why p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+        line-height: 28px;
+        padding-top: 38px;
+      }
+      
+      @media screen and (max-width: 992px) {
+        #img .why {
+          margin-top: 80px;
+        }
+      }
+      .benefits {
+        width: 1070px;
+        height: auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background-color: #ffffff;
+        margin-top: -325px;
+        margin-left: 92px;
+        font-family: "Roboto", sans-serif;
+      }
+      .benefits h2 {
+        font-size: 28px;
+        font-weight: 500;
+        padding-top: 45px;
+        margin-left: 70px;
+      }
+      .benefits .lists {
+        padding: 33px 70px 58px 70px;
+      }
+      @media screen and (max-width: 992px) {
+        .benefits .lists {
+          padding: 33px 35px 58px 35px;
+        }
+      }
+      .benefits .list {
+        -webkit-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 100px;
+                column-gap: 100px;
+      }
+      @media screen and (max-width: 992px) {
+        .benefits .list {
+          -webkit-column-gap: 10px;
+                  column-gap: 10px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .benefits .list {
+          -webkit-column-count: 1;
+                  column-count: 1;
+        }
+      }
+      .benefits .list-one {
+        margin-right: 120px;
+      }
+      .benefits .list-two {
+        width: 364x;
+        height: 347x;
+      }
+      .benefits li {
+        font-size: 17px;
+        font-weight: 500;
+        background: url(https://svgshare.com/i/68A.svg) no-repeat center left;
+        background-size: 25px;
+        padding-left: 35px;
+        margin-bottom: 14px;
+        list-style-type: none;
+      }
+      
+      @media screen and (max-width: 1200px) {
+        .benefits {
+          margin-top: -110px;
+          margin-left: 45px;
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .benefits {
+          margin-top: 55px;
+          margin-left: 0;
+        }
+      }
+      /* SECTION FORM */
+      .allForm {
+        width: 580px;
+        margin: 0 auto;
+      }
+      
+      .apply-now h2 {
+        margin-top: 73px;
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        color: #112233;
+      }
+      .apply-now p {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        margin: 17px 0 58px 0;
+        text-align: center;
+        color: #112233;
+      }
+      .apply-now .form-group {
+        margin-bottom: 25px;
+      }
+      .apply-now .form-radio {
+        margin-bottom: 30px;
+      }
+      .apply-now label {
+        margin-bottom: 0;
+      }
+      .apply-now span, .apply-now input {
+        display: block;
+      }
+      .apply-now span {
+        color: #112233;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        text-align: left;
+        margin-right: 10px;
+      }
+      .apply-now input {
+        width: 275px;
+        height: 51px;
+        border-radius: 3px;
+        border: 1px solid #d5d9df;
+        background-color: #ffffff;
+        padding-left: 14px;
+        cursor: pointer;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+      }
+      .apply-now input::-webkit-input-placeholder {
+        color: #d5d9df;
+      }
+      .apply-now input:-ms-input-placeholder {
+        color: #d5d9df;
+      }
+      .apply-now input::-ms-input-placeholder {
+        color: #d5d9df;
+      }
+      .apply-now input::placeholder {
+        color: #d5d9df;
+      }
+      .apply-now input::-webkit-input-placeholder:hover {
+        color: #1ec54e;
+      }
+      .apply-now input:-ms-input-placeholder:hover {
+        color: #1ec54e;
+      }
+      .apply-now input::-ms-input-placeholder:hover {
+        color: #1ec54e;
+      }
+      .apply-now input::placeholder:hover {
+        color: #1ec54e;
+      }
+      .apply-now input:hover {
+        border-radius: 3px;
+        border: 1px solid #1ec54e;
+        padding-left: 14px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .apply-now .fname, .apply-now .mail {
+        margin-right: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        .apply-now .fname, .apply-now .mail {
+          margin-right: 0;
+        }
+      }
+      .apply-now select {
+        width: 275px;
+        height: 51px;
+        border-radius: 3px;
+        border: 1px solid #d5d9df;
+        background-color: #ffffff;
+        cursor: pointer;
+        padding: 0 15px;
+        background: url(https://svgshare.com/i/65f.svg) no-repeat 92% 48%;
+        background-size: 14px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+      }
+      .apply-now select:hover {
+        border: 1px solid #1ec54e;
+      }
+      .apply-now option {
+        padding-left: 18px;
+      }
+      .apply-now .broker, .apply-now .aboutUs {
+        width: 570px;
+      }
+      .apply-now .aboutUs {
+        background: url(https://svgshare.com/i/65f.svg) no-repeat 96% 48%;
+        background-size: 14px;
+      }
+      .apply-now .form-radio-title {
+        text-align: left;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding-top: 0;
+      }
+      .apply-now .radio {
+        display: inline-block;
+        width: initial;
+        height: initial;
+        margin-right: 8px;
+      }
+      .apply-now .radio-inp {
+        margin-right: 25px;
+      }
+      .apply-now .radio-yes {
+        margin-right: 38px;
+      }
+      .apply-now .aboutYou {
+        width: 570px;
+        height: 121px;
+        border-radius: 3px;
+        border: 1px solid #d5d9df;
+        padding-top: 15px;
+        padding-left: 20px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+      }
+      .apply-now .aboutYou:hover {
+        border: 1px solid #1ec54e;
+      }
+      .apply-now button {
+        width: 160px;
+        height: 50px;
+        box-shadow: 0 5px 30px rgba(29, 212, 81, 0.4);
+        border-radius: 4px;
+        background-color: #1ec54e;
+        border: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .apply-now button:hover {
+        background-color: #26cd56;
+        box-shadow: 0 5px 30px rgba(29, 212, 81, 0.7);
+        transition: .3s;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .apply-now input {
+          width: 327px;
+        }
+      
+        .apply-now select {
+          width: 327px;
+        }
+      
+        .apply-now .aboutUs, .apply-now .broker {
+          width: 327px;
+        }
+      
+        .apply-now .aboutYou {
+          width: 327px;
+        }
+      
+        .allForm {
+          width: 327px;
+          text-align: center;
+        }
+        .allForm .aboutUs {
+          background: url(https://svgshare.com/i/65f.svg) no-repeat 93% 48%;
+          background-size: 14px;
+        }
+      
+        .apply-now .form-group {
+          margin-bottom: 0;
+        }
+      
+        .apply-now span {
+          margin-top: 25px;
+        }
+      
+        .apply-now p {
+          margin-bottom: 33px;
+        }
+      
+        .apply-now button {
+          margin-top: 24px;
+          margin-bottom: 60px;
+        }
+      
+        .apply-now .form-radio {
+          margin-bottom: 0;
+        }
+      
+        .apply-now .form-radio-title {
+          margin-bottom: 0px;
+        }
+      }
+      @media screen and (max-width: 544px) {
+        .allForm {
+          width: 327px;
+          text-align: left;
+        }
+      }
+      @media screen and (max-width: 375px) {
+        #first {
+          background: #495c6f url(http://www.1up.ee/realtyTopia/careers-header.png) no-repeat 72%/cover;
+        }
+        #first h1 {
+          font-size: 30px;
+        }
+        #first p {
+          font-size: 15px;
+        }
+      
+        #img .why {
+          margin-top: 50px;
+        }
+      
+        #img .why p {
+          padding-top: 30px;
+          padding-bottom: 10px;
+        }
+      
+        #img img {
+          margin-top: 40px;
+          max-width: 100%;
+        }
+      
+        .benefits {
+          margin-top: 40px;
+        }
+      
+        .apply-now h2 {
+          margin-top: 55px;
+        }
+      
+        #img .why h2 {
+          font-size: 28px;
+          font-weight: 500;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-device-width: 374px) {
+        .apply-now input {
+          width: 290px;
+        }
+      
+        .apply-now select {
+          width: 290px;
+        }
+      
+        .apply-now .aboutUs, .apply-now .broker {
+          width: 290px;
+        }
+      
+        .apply-now .aboutYou {
+          width: 290px;
+        }
+      
+        .benefits h2 {
+          margin-left: 40px;
+        }
+      
+        .allForm {
+          text-align: center;
+        }
+      
+        .apply-now span {
+          margin-right: 7px;
+        }
+      }
+      @media screen and (max-width: 374px) {
+        .block-checkbox {
+          width: 290px;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        .allForm {
+          width: 270px;
+        }
+      
+        .apply-now input {
+          width: 270px;
+        }
+      
+        .apply-now select {
+          width: 270px;
+        }
+      
+        .apply-now .aboutUs, .apply-now .broker {
+          width: 270px;
+        }
+      
+        .apply-now .aboutYou {
+          width: 270px;
+        }
+      }
+      @media screen and (max-width: 345px) {
+        .allForm {
+          width: 275px;
+        }
+      
+        .apply-now input {
+          width: 275px;
+        }
+      
+        .apply-now select {
+          width: 275px;
+        }
+      
+        .apply-now .aboutUs, .apply-now .broker {
+          width: 275px;
+        }
+      
+        .apply-now .aboutYou {
+          width: 275px;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .allForm {
+          width: 275px;
+        }
+      
+        .apply-now input {
+          width: 275px;
+        }
+      
+        .apply-now select {
+          width: 275px;
+        }
+      
+        .apply-now .aboutUs, .apply-now .broker {
+          width: 275px;
+        }
+      
+        .apply-now .aboutYou {
+          width: 275px;
+        }
+      
+        .block-checkbox {
+          margin: 0;
+        }
+        .block-checkbox .form-radio-title {
+          font-size: 14px;
+        }
+      }
+      /* RADIO BUTTON IMG */
+      .wrapper input {
+        width: initial;
+        height: initial;
+      }
+      .wrapper input[type="radio"] {
+        display: none;
+      }
+      .wrapper input[type="radio"]:checked ~ .custom-checkbox:after {
+        background: #1ec54e;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+      .wrapper input[type="radio"]:checked ~ .custom-checkbox:before {
+        border: 1px solid #1ec54e;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+      .wrapper .custom-checkbox {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #d5d9df;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .wrapper .custom-checkbox:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        border-radius: 50%;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        transition: .4s;
+      }
+      .wrapper .custom-checkbox:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        border-radius: 50%;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+      }
+      
+      
