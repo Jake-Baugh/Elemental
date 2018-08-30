@@ -21,6 +21,11 @@ aside {
     clear: both;
     margin: 0 0 0 15px;
   }
+
+.blogTxt .tags {
+    margin: 0 0 0 6px;
+}
+
   .tags {
     display: inline-block;
     /* height: 21px; */
