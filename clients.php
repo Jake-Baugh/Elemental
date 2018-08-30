@@ -1,3 +1,4 @@
+<?php require_once( 'cctr/cms.php' ); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +27,6 @@
 
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/style.default.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://www.jasny.net/bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
 
@@ -43,8 +42,8 @@
       <a href="marketing.html">Marketing &amp; Creative</a>
       <a href="pr-comms.html">PR &amp; Communications</a>
       <a href="about.html">About</a>
-      <a href="clients.php">Clients</a>
-      <a href="news-views.php" class="active">News &amp; Views</a>
+      <a href="clients.php" class="active">Clients</a>
+      <a href="news-views.php">News &amp; Views</a>
       <a href="contact.html">Contact</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="cookie-policy.html">Cookie Policy</a>
@@ -71,8 +70,7 @@
           <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-      <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
-        type="button">
+      <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -81,10 +79,11 @@
   </div>
 
   <!-- Header -->
-  <header class="masthead-small d-flex" id="bg-clients">
+  <header class="masthead-medium d-flex" id="bg-clients">
     <div class="container my-auto">
-      <div class="col-lg-6 col-md-6 offset-lg-6 offset-md-6 mt-4">
-
+      <div class="col-8 offset-2 mt-5 text-center" style="z-index: 100">
+        <h2>Clients</h2>
+          <p class="h3 text-white">We work with some great companies across the health and technology sectors.</p>
       </div>
     </div>
   </header>
@@ -92,76 +91,119 @@
 
 
   <!-- Portfolio -->
-  <section class="content-section bg-white" id="portfolio">
+  <section class="content-section bg-light" id="portfolio">
     <div class="container">
-      <div class="row">
-        <!-- Latest Posts -->
-        <main class="post blog-post col-lg-8 pt-0 pr-5"> 
-            <div class="container">
-                <div class="post-single">
-                  <div class="post-thumbnail"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
-                  <div class="post-details">
-                      <h1><cms:show k_page_title /><a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
-                      <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
-      
-                          <div class="d-flex align-items-center flex-wrap">
-                            <div class="blog-title"><span><cms:show blog_author /></span></div>
-                        </a>
-                        <div class="date"></div>
-                        <div class="comments meta-last"></i><cms:show k_page_date /></div>
-                      </div>
-                    </div>
-                  <div class="post-body">
-                    <cms:show blog_content />
-                  </div>
-                  <div class="posts-nav d-flex justify-content-between align-items-stretch flex-column flex-md-row"><a href="blog-post.html" class="prev-post text-left d-flex align-items-center">
-                      <div class="icon prev"><i class="fa fa-angle-left"></i></div>
-                      <div class="text"><strong class="text-primary">Previous Post </strong>
-                        <h6>Lorem Ipsum</h6>
-                      </div></a><a href="blog-post.html" class="next-post text-right d-flex align-items-center justify-content-end">
-                      <div class="text"><strong class="text-primary">Next Post </strong>
-                        <h6>Lorum Ipsum</h6>
-                      </div>
-                      <div class="icon next"><i class="fa fa-angle-right">   </i></div></a></div>
-    
-                </div>
-              </div>
-            </div>
-          </main>
-        <aside class="col-lg-4 p-3" style="background-color:#eee">
-
-          <!-- Widget [Latest Posts Widget]        -->
-          <div class="widget latest-posts mb-4">
-            <header>
-              <h3 class="h6">Latest Posts</h3>
-            </header>
-            <cms:pages masterpage='blog.php' limit='3' >
-            <div class="blog-posts"><a href="<cms:show k_page_link />">
-              <div class="item d-flex align-items-center">
-                <div class="image"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
-                <div class="blog-title"><strong><cms:show k_page_title /></strong>
-                  <div class="d-flex align-items-center">
-                    <div class="views"><cms:show blog_author /></div>
-                    <div class="comments"><cms:show k_page_date /></div>
-                  </div>
-                </div>
-              </div>
-            </a></div>
-            </cms:pages >
-          </div>
-          <!-- Widget [Categories Widget]-->
-      <div class="widget categories mb-4">
-        <header>
-          <h3 class="h6">Categories</h3>
-        </header>
-        <cms:folders masterpage='blog.php' >
-          <div class="item d-flex justify-content-between"><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a><span><cms:show k_folder_totalpagecount/></span></div>
-        </cms:folders>
+  
+      <div class="row client-icon">
+        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+         <img src="img/client/AgeAbode5.png"/>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+            <img src="img/client/page/beautiful-information.png"/>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                <img src="img/client/page/calgary-scientific.png"/>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                <img src="img/client/page/cimar.png"/>
+        </div>
       </div>
-     </aside>
+
+      <div class="row client-icon">
+            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+             <img src="img/client/page/digital-health.png"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                <img src="img/client/page/dmc.png"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                    <img src="img/client/page/enovacom.png"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                    <img src="img/client/page/epro.png"/>
+            </div>
+          </div>
+
+          <div class="row client-icon">
+                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                 <img src="img/client/page/hivewire.png"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                    <img src="img/client/page/intersystems.png"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                        <img src="img/client/page/jac.png"/>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                        <img src="img/client/page/synopsis.png"/>
+                </div>
+              </div>
+
+              <div class="row client-icon">
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                     <img src="img/client/medilogik3.png"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                        <img src="img/client/Medelinked4.png"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                            <img src="img/client/page/philips-healthcare.png"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                            <img src="img/client/page/phoenixs.png"/>
+                    </div>
+                  </div>
+
+                  <div class="row client-icon">
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                     <img src="img/client/restart1.png"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+                        <img src="img/client/zesty2.png"/>
+                    </div>
+                   
+                  </div>
+        
+    
+
+      
+      
     </div>
     </div>
   </section>
+
+  <section class="content-section" id="portfolio">
+        <div class="container">
+          <div class="row text-center">
+            <div class="text-white col-md-4 offset-md-4 mb-5">
+              <h3>Case Studies</h3>
+            </div>
+          </div>
+    
+          <div class="row">
+            <cms:pages masterpage='blog.php' folder='case-study' paginate='1' limit='3' >
+            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox">
+              <div class="item">
+                <div class="image-box" style="background-image:url(img/client/medilogik.jpg)">
+                  <a href="<cms:show k_page_link />"><img src="<cms:show blog_image />" alt="..."></a>
+                </div>
+                <div class="blogTxt">
+                    <span class="tags"><cms:show k_page_foldertitle /></span>
+                  <a href="<cms:show k_page_link />"><h5>
+                    <cms:show k_page_title />
+                    </h5></a>
+                  <p class="post_intro hidden-xs">
+                    <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
+                  </p>
+                </div>
+              </div>
+            </div>
+            </cms:pages >
+          </div>
+        </div>
+        </div>
+      </section>
+
 
 
   <!-- Footer -->
@@ -244,6 +286,7 @@
                 <h6 class="pb-3"><cms:show k_page_title /><span class="tags"><cms:show k_page_foldertitle /></span></h6>
                 </cms:pages >
             </div>
+
           </div>
   
           <!-- Grid column -->
@@ -321,3 +364,4 @@
 </body>
 
 </html>
+<?php COUCH::invoke(); ?>
