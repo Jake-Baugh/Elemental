@@ -97,9 +97,9 @@
           <!-- Latest Posts -->
           <main class="posts-listing col-lg-8">
             <div class="container">
+              <cms:pages masterpage='blog.php' folder=k_folder_name paginate='1' limit='4' >
               <div class="row">
                 <!-- post -->
-                <cms:pages masterpage='blog.php' folder=k_folder_name paginate='1' limit='4' >
                 <div class="post row">
                   <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
                     <div class="post-thumbnail">
@@ -116,24 +116,38 @@
   
                           <div class="blog-title"><span><cms:show blog_author /></span></div></a>
                         <div class="date"></div>
-                        <div class="comments meta-last"></i><cms:show k_page_date /><span class="tags">Blog</span></div>
+                        <div class="comments meta-last"></i><cms:show k_page_date /><span class="tags"><cms:show k_page_foldertitle/></span></div>
                       </footer>
                     </div>
                   </div>
                 </div>
                 <!-- post             -->
-                </cms:pages >
               </div>
               <!-- Pagination -->
-              <nav aria-label="Page navigation example">
-                <ul class="pagination pagination-template d-flex justify-content-center">
-                  <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
-                  <li class="page-item"><a href="#" class="page-link active">1</a></li>
-                  <li class="page-item"><a href="#" class="page-link">2</a></li>
-                  <li class="page-item"><a href="#" class="page-link">3</a></li>
-                  <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </nav>
+              <cms:if k_paginator_required >
+                <cms:if k_paginated_bottom>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-template d-flex justify-content-center">
+                      <cms:paginator adjacents='1'>
+                        <cms:if k_crumb_type='prev' >
+                        <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                        </cms:if >
+                        <cms:if k_crumb_type='page' >
+                          <cms:if k_crumb_current >
+                          <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link active"><cms:show k_crumb_text /></a></li>
+                          <cms:else />
+                          <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link"><cms:show k_crumb_text /></a></li>
+                          </cms:if >
+                        </cms:if >
+                        <cms:if k_crumb_type='next' >
+                          <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                        </cms:if >
+                      </cms:paginator>
+                    </ul>
+                  </nav>
+                </cms:if >
+              </cms:if >
+              </cms:pages >
             </div>
           </main>
           <aside class="col-lg-4 p-3" style="background-color:#eee">
