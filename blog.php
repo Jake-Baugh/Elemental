@@ -4,9 +4,9 @@
   <cms:editable name='blog_author' type='text' label='Author' />
   <cms:editable name='blog_content' type='richtext' />
    
-  <cms:folder name="marketing" title="Marketing" />
-  <cms:folder name="nhs-sales-teams" title="NHS Sales Teams" />
-  <cms:folder name="nhs-suppliers" title="NHS Suppliers" />
+  <cms:folder name="blog" title="Blog" />
+  <cms:folder name="case-study" title="Case Study" />
+  <cms:folder name="news" title="News" />
 
 </cms:template>
 
@@ -15,5 +15,4 @@
 <cms:else />
   <cms:embed 'news-views.html' />
 </cms:if>
-
 <?php COUCH::invoke(); ?>

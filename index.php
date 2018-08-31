@@ -28,6 +28,8 @@
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
 
+  <link href="css/custom.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://www.jasny.net/bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -41,12 +43,12 @@
       <a href="data-services.html">Data Services</a>
       <a href="marketing.html">Marketing &amp; Creative</a>
       <a href="pr-comms.html">PR &amp; Communications</a>
-      <a href="case-study.php">Clients</a>
+      <a href="about.html">About</a>
+      <a href="clients.php">Clients</a>
       <a href="news-views.php">News &amp; Views</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Policy</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
     </div>
   </nav>
 
@@ -54,7 +56,7 @@
     <div class="container my-auto">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
         <img src="img/elemental_logo.svg"></img>
       </a>
 
@@ -88,14 +90,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="scroller mt-4">
-          <a class="icon-container" href="#">
-            <span class="chevron"></span>
-            <span class="chevron"></span>
-            <span class="chevron"></span>
-            <span class="text">Scroll down</span>
-          </a>
-        </div>
+          <div class="scroll-down"></div>
       </div>
     </div>
   </header>
@@ -107,7 +102,7 @@
   <!-- Services -->
   <section class="content-section text-white text-center" id="services">
     <div class="container">
-      <div class="row">
+      <div class="row mb-4 mt-4">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <div class="service-icon mx-auto pb-3 text-white" style="height:580px" id="fire">
             <h4 class="service-title pt-2 mb-2">Sales
@@ -124,7 +119,7 @@
               <img src="img/fire.png" width="60%"></img>
 
             </div>
-            <h5>I want more leads</h5>
+            <a href="sales-acceleration.html" class="text-white"><h5>I want more leads</h5></a>
 
           </div>
         </div>
@@ -146,7 +141,7 @@
               <img src="img/earth.png" width="60%"></img>
 
             </div>
-            <h5>Give me good data</h5>
+            <a href="data-services.html" class="text-white"><h5>Give me good data</h5></a>
 
           </div>
         </div>
@@ -164,7 +159,7 @@
               <img src="img/water.png" width="60%"></img>
 
             </div>
-            <h5>Make me look great</h5>
+            <a href="marketing.html" class="text-white"><h5>Make me look great</h5></a>
 
           </div>
         </div>
@@ -185,7 +180,7 @@
               <img src="img/air.png" width="60%"></img>
 
             </div>
-            <h5>Build my brand</h5>
+            <a href="pr-comms.html" class="text-white"><h5>Build my brand</h5></a>
 
           </div>
         </div>
@@ -194,9 +189,9 @@
   </section>
 
   <!-- About -->
-  <section class="content-section" id="about">
+  <section class="content-section bg-light" id="about">
     <div class="container">
-      <div class="row">
+      <div class="row mt-4 mb-4">
         <div class="col-md-5">
           <h3 class="mb-3">We are a growth agency</h3>
           <h4 class="mb-3">Results-based. NHS IT experience. Innovative approach.</h4>
@@ -217,12 +212,12 @@
   <!-- Call to Action -->
   <section class="content-section bg-gradient text-center text-white">
     <div class="container">
-      <div class="row text-center">
+      <div class="row mt-4 text-center">
         <div class="col-md-12 mb-5">
           <h3>We're all about results</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-5">
         <div class="col-lg-3 col-md-6">
           <div class="statsbox col-md-12">
             <div class="statcontent">
@@ -236,7 +231,7 @@
           <div class="statsbox col-md-12">
             <div class="statcontent">
               <h3 class='numscroller' data-min='0' data-max='1000000' data-increment='10000'>1000000</h3>
-              <p>NHS data lines built</p>
+              <p>lines of NHS data built &amp; managed</p>
             </div>
           </div>
         </div>
@@ -268,29 +263,26 @@
   <section class="content-section" id="portfolio">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-4 offset-md-4 mb-5">
+        <div class="text-white col-md-4 offset-md-4 mb-5">
           <h3>Our Work</h3>
         </div>
       </div>
 
       <div class="row">
-        <cms:pages masterpage='case-study.php' paginate='1' limit='3' >
+        <cms:pages masterpage='blog.php' folder='case-study' paginate='1' limit='3' >
         <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox">
           <div class="item">
             <div class="image-box" style="background-image:url(img/client/medilogik.jpg)">
               <a href="<cms:show k_page_link />">
-                <img src="<cms:show cs_image />">
+                <img src="<cms:show blog_image />">
               </a>
             </div>
             <div class="blogTxt">
-              <div class="blogCategory">
-                <a href="/"><cms:show k_page_foldertitle /></a>
-              </div>
-              <h5>
-                <a href="<cms:show k_page_link />"><cms:show k_page_title /></a>
-              </h5>
+              <span class="tags"><cms:show k_page_foldertitle /></span>
+              
+              <a href="<cms:show k_page_link />"><h5><cms:show k_page_title /></h5></a>
               <p class="post_intro hidden-xs">
-                <cms:excerpt count='40' ><cms:show cs_content /></cms:excerpt>
+                <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
               </p>
             </div>
           </div>
@@ -310,19 +302,16 @@
         </div>
       </div>
       <div class="row">
-        <cms:pages masterpage='blog-post.php' paginate='1' limit='3' >
+        <cms:pages masterpage='blog.php' folder='blog' paginate='1' limit='3' >
         <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox">
           <div class="item">
             <a href="<cms:show k_page_link />">
               <img src="<cms:show blog_image />">
             </a>
             <div class="blogTxt">
-              <div class="blogCategory">
-                <a href="/"><cms:show k_page_foldertitle /></a>
-              </div>
-              <h5>
-                <a href="<cms:show k_page_link />"><cms:show k_page_title /></a>
-              </h5>
+              
+              <span class="tags"><cms:show k_page_foldertitle /></span>
+              <a href="<cms:show k_page_link />"><h5><cms:show k_page_title /></h5></a>
               <p class="post_intro hidden-xs">
                 <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
               </p>
@@ -330,8 +319,8 @@
           </div>
         </div>
         </cms:pages >
-        <div id="loadMore" style="">
-          <a href="#">Load More</a>
+        <div id="loadMore">
+            <a href="#" class="btn btn-lg">Load more</a>
         </div>
       </div>
     </div>
@@ -339,8 +328,8 @@
 
   <section class="content-section bg-white">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-12 mb-5">
+      <div class="row mt-4 mb-4 text-center">
+        <div class="col-md-12 mb-2">
           <h3>Clients and experience</h3>
         </div>
       </div>
@@ -373,158 +362,8 @@
       </small>
     </section> -->
 
-  <!-- Footer -->
-  <!-- Footer -->
-  <footer class="page-footer bg-footer text-grey font-small mdb-color pt-4">
 
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-
-      <!-- Footer links -->
-      <div class="row text-center text-md-left mt-3 pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 col-sm-6 col-xs-6 mx-auto mt-3">
-          <h4 class="mb-4">Site Map</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>Home</li>
-            </a>
-            <a href="#!">
-              <li>Sales Acceleration</li>
-            </a>
-            <a href="#!">
-              <li>Data Management</li>
-            </a>
-            <a href="#!">
-              <li>Marketing &amp; Creative</li>
-            </a>
-            <a href="#!">
-              <li>PR &amp; Communications</li>
-            </a>
-            <a href="case-study.php">
-              <li>Clients</li>
-            </a>
-            <a href="news-views.php">
-              <li>News &amp; Views</li>
-            </a>
-            <a href="#!">
-              <li>About</li>
-            </a>
-            <a href="#!">
-              <li>Contact</li>
-            </a>
-          </ul>
-
-          <div>
-            <ul class="footer-info">
-
-              <a href="#!">
-                <li>Privacy Policy</li>
-              </a>
-              <a href="#!">
-                <li>Cookie Policy</li>
-              </a>
-
-            </ul>
-          </div>
-
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 col-sm-6 col-xs-6 mx-auto mt-3">
-          <h4 class="mb-4">Services</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>Sales Acceleration</li>
-            </a>
-            <a href="#!">
-              <li>Data Services</li>
-            </a>
-            <a href="#!">
-              <li>Marketing and Creative</li>
-            </a>
-            <a href="#!">
-              <li>PR and Communications</li>
-            </a>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-          <h4 class="mb-4">News and views</h4>
-          <div>
-            <h6>NHS IT sales teams: why you need more than job title</h6>
-            <p>Exceati aut lauta dolorehenis repre, aut labor mincien delestis qui odis derum vel is magnimi...</p>
-
-            <h6>Advice for NHS IT suppliers: marketing in tough times</h6>
-            <p>Olupta denda quis ercimpe rnatiis es illaborit nus di dolorem si quam hilicatur, sunt ex...</p>
-            <h6>Three easy steps to tackling GDPR, and sleeping better</h6>
-            <p>Olupta denda quis ercimpe rnatiis es illaborit verem. Rionecus eiumenis nus di dolorem sunt ex...</p>
-          </div>
-
-        </div>
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-          <h4 class="mb-4">Get in touch</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>7 All Hallows Road, Paignton, Devon TQ3 1EB</li>
-            </a>
-            <a href="#!">
-              <li>Phone: 0808 168 6426</li>
-            </a>
-            <a href="#!">
-              <li>Email: hello@elemental-solutions.co.uk</li>
-            </a>
-          </ul>
-          <div class="footer-icons">
-            <a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
-          </div>
-          <hr color="#fff">
-          <h4>Sign up to our newsletter</h4>
-          <form class="newsletter">
-            <span class="container active">
-              <input class="required" type="email" id="email" name="email" />
-            </span>
-            <span class="submit" title="Subscribe"></span>
-          </form>
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Footer links -->
-
-      <!-- Grid column -->
-      <div class="col-md-7 col-lg-8 pl-0 pb-4">
-
-        <!--Copyright-->
-        <p class="text-center text-md-left">Copyright © BDMS Ltd 2018
-        </p>
-        <p class="vat-info">Elemental is the trading name of Business Development & Marketing Solutions Ltd, a limited company registered in
-          England and Wales with the registration number 590220, and whose registered office address is 4 Brackley Close,
-          Bournemouth International Airport, Christchurch, Dorset, BH23 6SE.</p>
-
-      </div>
-
-    </div>
-    <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-  </footer>
-  <!-- Footer -->
+  <cms:embed 'footer.html' />
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">

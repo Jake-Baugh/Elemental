@@ -37,17 +37,17 @@
 
   <nav id="myNavmenu" class="navmenu navmenu-fixed-right offcanvas" role="navigation">
     <div class="vertical-menu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.php">Home</a>
       <a href="sales-acceleration.html">Sales Acceleration</a>
       <a href="data-services.html">Data Services</a>
       <a href="marketing.html">Marketing &amp; Creative</a>
       <a href="pr-comms.html">PR &amp; Communications</a>
-      <a href="clients.html">Clients</a>
-      <a href="news-views.html">News &amp; Views</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Policy</a>
+      <a href="about.html">About</a>
+      <a href="clients.php">Clients</a>
+      <a href="news-views.php" class="active">News &amp; Views</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
     </div>
   </nav>
 
@@ -55,7 +55,7 @@
     <div class="container my-auto">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
         <img src="img/elemental_logo.svg"></img>
       </a>
 
@@ -80,222 +80,112 @@
   </div>
 
   <!-- Header -->
-  <header class="masthead-small d-flex" id="bg-clients">
+  <header class="masthead-medium d-flex" id="bg-news">
     <div class="container my-auto">
-      <div class="col-lg-6 col-md-6 offset-lg-6 offset-md-6 mt-4">
-
+      <div class="col-8 offset-2 mt-5 text-center" style="z-index: 100">
+        <h2>News &amp; views</h2>
+          <p class="h3 text-white">Blogs, reports and market insights</p>
       </div>
     </div>
   </header>
 
 
-
   <!-- Portfolio -->
-  <section class="content-section" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <!-- Latest Posts -->
-        <main class="posts-listing col-lg-8">
-          <div class="container">
-            <div class="row">
-              <!-- post -->
-              <cms:pages masterpage='blog-post.php' folder=k_folder_name paginate='1' limit='3' >
-              <div class="post row">
-                <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
-                  <div class="post-thumbnail">
-                    <a href="<cms:show k_page_link />"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></a>
+  <section class="content-section bg-white" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <!-- Latest Posts -->
+          <main class="posts-listing col-lg-8">
+            <div class="container">
+              <cms:pages masterpage='blog.php' folder=k_folder_name paginate='1' limit='4' >
+              <div class="row">
+                <!-- post -->
+                <div class="post row">
+                  <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+                    <div class="post-thumbnail">
+                      <a href="<cms:show k_page_link />"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12 pr-5">
+                    <div class="post-details">
+                      <a href="<cms:show k_page_link />">
+                        <h3 class="h4"><cms:show k_page_title /></h3></a>
+                      <p class="text-muted"><cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt></p>
+                      <a class="pb-4" href="<cms:show k_page_link />">Read More</a>
+                      <footer class="post-footer d-flex align-items-center"><a href="<cms:show k_page_link />" class="author d-flex align-items-center flex-wrap">
+  
+                          <div class="blog-title"><span><cms:show blog_author /></span></div></a>
+                        <div class="date"></div>
+                        <div class="comments meta-last"></i><cms:show k_page_date /><span class="tags"><cms:show k_page_foldertitle/></span></div>
+                      </footer>
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12 pr-5">
-                  <div class="post-details">
-                    <a href="<cms:show k_page_link />">
-                      <h3 class="h4"><cms:show k_page_title /></h3></a>
-                    <p class="text-muted">
-                      <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
-                    </p>
-                    <a class="pb-4" href="<cms:show k_page_link />">Read More</a>
-                    <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
-
-                        <div class="blog-title"><span><cms:show blog_author /></span></div></a>
-                      <div class="date"></div>
-                      <div class="comments meta-last"></i><cms:show k_page_date /></div>
-                    </footer>
-                  </div>
-                </div>
+                <!-- post             -->
               </div>
-              <cms:paginator />
+              <!-- Pagination -->
+              <cms:if k_paginator_required >
+                <cms:if k_paginated_bottom>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-template d-flex justify-content-center">
+                      <cms:paginator adjacents='1'>
+                        <cms:if k_crumb_type='prev' >
+                        <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                        </cms:if >
+                        <cms:if k_crumb_type='page' >
+                          <cms:if k_crumb_current >
+                          <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link active"><cms:show k_crumb_text /></a></li>
+                          <cms:else />
+                          <li class="page-item"><a href="<cms:show k_crumb_link />" class="page-link"><cms:show k_crumb_text /></a></li>
+                          </cms:if >
+                        </cms:if >
+                        <cms:if k_crumb_type='next' >
+                          <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                        </cms:if >
+                      </cms:paginator>
+                    </ul>
+                  </nav>
+                </cms:if >
+              </cms:if >
               </cms:pages >
             </div>
-            <!-- Pagination -->
-            <nav aria-label="Page navigation example">
-              <ul class="pagination pagination-template d-flex justify-content-center">
-                <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
-                <li class="page-item"><a href="#" class="page-link active">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
-              </ul>
-            </nav>
-          </div>
-        </main>
-        <cms:embed 'blog-side-bar.html' />
+          </main>
+          <aside class="col-lg-4 p-3" style="background-color:#eee">
+  
+            <!-- Widget [Latest Posts Widget]        -->
+            <div class="widget latest-posts mb-4">
+              <header>
+                <h3 class="h6">Latest Posts</h3>
+              </header>
+              <cms:pages masterpage='blog.php' limit='3' >
+              <div class="blog-posts"><a href="<cms:show k_page_link />">
+                <div class="item d-flex align-items-center">
+                  <div class="image"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
+                  <div class="blog-title"><strong><cms:show k_page_title /></strong>
+                    <div class="d-flex align-items-center">
+                      <div class="views"><cms:show blog_author /></div>
+                      <div class="comments"><cms:show k_page_date /></div>
+                    </div>
+                  </div>
+                </div>
+              </a></div>
+              </cms:pages >
+            </div>
+            <!-- Widget [Categories Widget]-->
+            <div class="widget categories mb-4">
+              <header>
+                <h3 class="h6">Categories</h3>
+              </header>
+              <cms:folders masterpage='blog.php' >
+                <div class="item d-flex justify-content-between"><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a><span><cms:show k_folder_totalpagecount/></span></div>
+              </cms:folders>
+            </div>
+          </aside>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- Footer -->
-  <!-- Footer -->
-  <footer class="page-footer bg-footer text-grey font-small mdb-color pt-4">
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-
-      <!-- Footer links -->
-      <div class="row text-center text-md-left mt-3 pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 col-sm-6 col-xs-6 mx-auto mt-3">
-          <h4 class="mb-4">Site Map</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>Home</li>
-            </a>
-            <a href="#!">
-              <li>Sales Acceleration</li>
-            </a>
-            <a href="#!">
-              <li>Data Management</li>
-            </a>
-            <a href="#!">
-              <li>Marketing &amp; Creative</li>
-            </a>
-            <a href="#!">
-              <li>PR &amp; Communications</li>
-            </a>
-            <a href="#!">
-              <li>Clients</li>
-            </a>
-            <a href="#!">
-              <li>News &amp; Views</li>
-            </a>
-            <a href="#!">
-              <li>About</li>
-            </a>
-            <a href="#!">
-              <li>Contact</li>
-            </a>
-          </ul>
-
-          <div>
-            <ul class="footer-info">
-
-              <a href="#!">
-                <li>Privacy Policy</li>
-              </a>
-              <a href="#!">
-                <li>Cookie Policy</li>
-              </a>
-
-            </ul>
-          </div>
-
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 col-sm-6 col-xs-6 mx-auto mt-3">
-          <h4 class="mb-4">Services</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>Sales Acceleration</li>
-            </a>
-            <a href="#!">
-              <li>Data Services</li>
-            </a>
-            <a href="#!">
-              <li>Marketing and Creative</li>
-            </a>
-            <a href="#!">
-              <li>PR and Communications</li>
-            </a>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="w-100 clearfix d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-          <h4 class="mb-4">News and views</h4>
-          <div>
-            <h6>NHS IT sales teams: why you need more than job title</h6>
-            <p>Exceati aut lauta dolorehenis repre, aut labor mincien delestis qui odis derum vel is magnimi...</p>
-
-            <h6>Advice for NHS IT suppliers: marketing in tough times</h6>
-            <p>Olupta denda quis ercimpe rnatiis es illaborit nus di dolorem si quam hilicatur, sunt ex...</p>
-            <h6>Three easy steps to tackling GDPR, and sleeping better</h6>
-            <p>Olupta denda quis ercimpe rnatiis es illaborit verem. Rionecus eiumenis nus di dolorem sunt ex...</p>
-          </div>
-
-        </div>
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-          <h4 class="mb-4">Get in touch</h4>
-          <ul class="footer-info mb-4">
-            <a href="#!">
-              <li>7 All Hallows Road, Paignton, Devon TQ3 1EB</li>
-            </a>
-            <a href="#!">
-              <li>Phone: 0808 168 6426</li>
-            </a>
-            <a href="#!">
-              <li>Email: hello@elemental-solutions.co.uk</li>
-            </a>
-          </ul>
-          <div class="footer-icons">
-            <a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
-          </div>
-          <hr color="#fff">
-          <h4>Sign up to our newsletter</h4>
-          <form class="newsletter">
-            <span class="container active">
-              <input class="required" type="email" id="email" name="email" />
-            </span>
-            <span class="submit" title="Subscribe"></span>
-          </form>
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Footer links -->
-
-      <!-- Grid column -->
-      <div class="col-md-7 col-lg-8 pl-0 pb-4">
-
-        <!--Copyright-->
-        <p class="text-center text-md-left">Copyright © BDMS Ltd 2018
-        </p>
-        <p class="vat-info">Elemental is the trading name of Business Development & Marketing Solutions Ltd, a limited company
-          registered in England and Wales with the registration number 590220, and whose registered office address is 4 Brackley
-          Close, Bournemouth International Airport, Christchurch, Dorset, BH23 6SE.</p>
-
-      </div>
-
-    </div>
-    <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-  </footer>
-  <!-- Footer -->
+    <cms:embed 'footer.html' />
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
