@@ -101,13 +101,35 @@
             </div>
             <hr color="#fff">
             <h4>Sign up to our newsletter</h4>
-            <form class="newsletter">
-              <span class="container active">
-                <input class="required" type="email" id="email" name="email" />
-              </span>
-              <span class="submit" title="Subscribe"></span>
-            </form>
-          </div>
+            <cms:form class='newsletter' method='post' name='subscribe'>
+                <cms:if k_success>
+                    <cms:php>
+                        global $CTX;
+                        use \DrewM\MailChimp\MailChimp;
+                        $MailChimp = new MailChimp('<cms:get_custom_field 'mc_api_key' masterpage='newsletter.php'/>');
+            
+                        $result = $MailChimp->post('lists/' . '<cms:get_custom_field 'mc_list_id' masterpage='newsletter.php'/>' . '/members', array(
+                            'email_address' => $CTX->get('frm_email'),
+                            'status'        => 'subscribed'
+                        ));
+                        if (isset($result['id'])) {
+                            echo "<p class=\"success\">Thanks ! You have succesfully subscribed.</p>";
+                        } else if (isset($result['type'])) {
+                            echo "<p class=\"error\"><strong>" . $result['title'] . " (" . $result['status'] . "):</strong> " . $result['detail'] . "<br><br>" . $result['type'] . "</p>";
+                        } else {
+                            echo "<p class=\"error\">An unknown error was encountered. Please try again later or contact us.</p>";
+                        }
+                    </cms:php>
+                <cms:else/>
+                    <cms:if k_error>
+                        <div class="notice">Please enter a valid email address.</div>
+                    </cms:if>
+                    <span class="container active">
+                    <cms:input class="required" type="email" id="email" name='email' placeholder='Email Address' required='1' type='text' validator='email'/>
+                    </span>
+                    <input type="submit" value="Subscribe to Newsletter">
+                </cms:if>
+            </cms:form>
           <!-- Grid column -->
   
         </div>
