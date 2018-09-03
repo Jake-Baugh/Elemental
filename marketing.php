@@ -307,26 +307,6 @@
 
   <cms:embed 'footer.html' />
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <!-- Plugin JavaScript -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-  <script src="https://www.jasny.net/bootstrap/dist/js/jasny-bootstrap.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/numScroller.js"></script>
-  <script src="js/main.min.js"></script>
-
 </body>
 
 </html>
