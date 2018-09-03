@@ -135,8 +135,8 @@
                         <cms:input name='message' type='textarea' class="form-control" id="inputMessage" rows="5" required='1' />
                       </div>
                       <div class="form-group">
-                        <label class="required" for="human">Are you human? Is sky blue or green? (4 characters required) <em>* <cms:if k_error_human>Please answer the question</cms:if></em></label>
-                        <cms:input type="text" required='1' validator='regex=/^blue$/i' class="input-text required-entry" id="human" name="human"/>
+                        <label class="required" for="human">Are you human? Is the sky blue or green? (4 characters required) <em>* <cms:if k_error_human>Please answer the question</cms:if></em></label>
+                        <cms:input type="text" required='1' validator='regex=/^blue$/i' class="form-control input-text required-entry" id="human" name="human"/>
                       </div>
                       <div class="text-center">
                         <button type="submit" class="btn btn-lg "><i class="fa fa-paper-plane"></i> Send</button>

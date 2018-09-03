@@ -959,7 +959,7 @@ a {
 }
 
  .newsletter {
-     max-width: 400px;
+     max-width: 100%;
      position: relative;
    }
    .newsletter > span.container {
@@ -1444,6 +1444,10 @@ a {
             flex: 0 0 100%;
             max-width: 100%;
         }
+        .newsletter {
+            max-width: 100%;
+            position: relative;
+          }
        .masthead {
         min-height: 24rem;
         position: relative;
