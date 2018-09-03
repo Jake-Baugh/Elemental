@@ -89,7 +89,26 @@
     </div>
   </header>
 
-
+  <section class="content-section bg-blue" id="portfolio">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2 m-auto">
+   <div class="row pt-3">
+          <div class="col-6">
+            <div class="d-inline-block">
+              <p>Phone <i class="fas fa-phone"></i> : 0808 168 6426</p>
+              <p>Email <i class="fas fa-envelope"></i> : hello@weareelemental.uk</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-inline-block">
+              <p>Twitter <i class="fab fa-twitter"></i> : @WeAreElemental_</p>
+              <p>Linkedin <i class="fab fa-linkedin-in"></i> : WeAreElemental</p>
+            </div>
+          </div>
+          </div>
+</div>
+</section>
 
   <!-- Portfolio -->
   <section class="content-section bg-white" id="portfolio">
