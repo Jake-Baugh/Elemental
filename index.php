@@ -367,9 +367,11 @@
       </div>
       <section class="customer-logos slider">
       <cms:pages masterpage='clientlogos.php' >
-        <div class="slide">
-          <img src="<cms:show cl_image />"/>
-        </div>
+        <cms:if cl_slider eq '1' >
+          <div class="slide">
+            <img src="<cms:show cl_image />"/>
+          </div>
+        </cms:if >
       </cms:pages >
       </section>
     </div>
