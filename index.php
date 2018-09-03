@@ -266,8 +266,8 @@
           <h4 class="mb-3">Results-based. NHS IT experience. Innovative approach.</h4>
           <p class="mb-4">We believe there is a better way to helping sales, marketing and business development directors in the digital
             heath sector manage data, develop pipeline, raise profile and hit targets.</p>
-          <a href="#" class="btn btn-lg mr-4 mb-4">Find out more</a>
-          <a href="#" class="btn btn-lg mb-4">Meet the team</a>
+          <a href="about.html#purpose" class="btn btn-lg mr-4 mb-4">Find out more</a>
+          <a href="about.html#team" class="btn btn-lg mb-4">Meet the team</a>
         </div>
         <div class="col-md-7 col-sm-12">
           <div class="word-cloud">
@@ -454,6 +454,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
   <script src="https://www.jasny.net/bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/numScroller.js"></script>
