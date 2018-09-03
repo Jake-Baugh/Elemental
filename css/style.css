@@ -958,6 +958,10 @@ a {
     border-right: 1px solid #616161;
 }
 
+.post-footer a {
+    color:#333;
+}
+
  .newsletter {
      max-width: 100%;
      position: relative;

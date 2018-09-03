@@ -29,8 +29,7 @@ strong {
 }
 
 a,
-i,
-span {
+i {
   display: inline-block;
   text-decoration: none;
   -webkit-transition: all 0.3s;
@@ -39,9 +38,7 @@ span {
 
 a:hover, a:focus,
 i:hover,
-i:focus,
-span:hover,
-span:focus {
+i:focus{
   text-decoration: none;
 }
 
@@ -642,6 +639,7 @@ section.latest-posts header {
 
 .post a {
   text-decoration: none;
+  color: #999;
 }
 
 .post a:hover, .post a:focus {
