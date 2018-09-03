@@ -366,21 +366,11 @@
         </div>
       </div>
       <section class="customer-logos slider">
+      <cms:pages masterpage='clientlogos.php' >
         <div class="slide">
-          <img src="img/client/restart1.png">
+          <img src="<cms:show cl_image />"/>
         </div>
-        <div class="slide">
-          <img src="img/client/zesty2.png">
-        </div>
-        <div class="slide">
-          <img src="img/client/medilogik3.png">
-        </div>
-        <div class="slide">
-          <img src="img/client/Medelinked4.png">
-        </div>
-        <div class="slide">
-          <img src="img/client/AgeAbode5.png">
-        </div>
+      </cms:pages >
       </section>
     </div>
   </section>
