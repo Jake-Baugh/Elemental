@@ -81,7 +81,7 @@
   <!-- Header -->
   <header class="masthead-medium d-flex" id="bg-clients">
     <div class="container my-auto">
-      <div class="col-8 offset-2 mt-5 text-center" style="z-index: 100">
+      <div class="col-12 col-md-8 offset-md-2 mt-5 text-center" style="z-index: 100">
         <h2>Clients</h2>
           <p class="h3 text-white">We work with some great companies across the health and technology sectors.</p>
       </div>
