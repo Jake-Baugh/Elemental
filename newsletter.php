@@ -1,5 +1,4 @@
 <?php require_once( 'cctr/cms.php' ); ?>
-<?php require_once( './MailChimp.php' ); ?>
 
 <cms:template title='Newsletter'>
     <cms:editable label='MailChimp API Key' name='mc_api_key' required='1' type='text'/>
