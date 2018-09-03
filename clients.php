@@ -93,82 +93,19 @@
   <!-- Portfolio -->
   <section class="content-section bg-light" id="portfolio">
     <div class="container">
-  
-      <div class="row client-icon">
-        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-         <img src="img/client/AgeAbode5.png"/>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-            <img src="img/client/page/beautiful-information.png"/>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                <img src="img/client/page/calgary-scientific.png"/>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                <img src="img/client/page/cimar.png"/>
-        </div>
-      </div>
 
-      <div class="row client-icon">
-            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-             <img src="img/client/page/digital-health.png"/>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                <img src="img/client/page/dmc.png"/>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                    <img src="img/client/page/enovacom.png"/>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                    <img src="img/client/page/epro.png"/>
-            </div>
-          </div>
-
+      <cms:pages masterpage='clientlogos.php' >
+        <cms:set num = "<cms:mod k_count '4'/>"/>
+        <cms:if num == '1'>
           <div class="row client-icon">
-                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                 <img src="img/client/page/hivewire.png"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                    <img src="img/client/page/intersystems.png"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                        <img src="img/client/page/jac.png"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                        <img src="img/client/page/synopsis.png"/>
-                </div>
-              </div>
-
-              <div class="row client-icon">
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                     <img src="img/client/medilogik3.png"/>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                        <img src="img/client/Medelinked4.png"/>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                            <img src="img/client/page/philips-healthcare.png"/>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                            <img src="img/client/page/phoenixs.png"/>
-                    </div>
-                  </div>
-
-                  <div class="row client-icon">
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                     <img src="img/client/restart1.png"/>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 p-4">
-                        <img src="img/client/zesty2.png"/>
-                    </div>
-                   
-                  </div>
-        
-    
-
-      
-      
-    </div>
+        </cms:if >
+          <div class="col-xs-12 col-sm-6 col-md-3 p-4">
+            <img src="<cms:show cl_image />"/>
+          </div>
+        <cms:if num == '0' || k_count == k_total_records>
+          </div>
+        </cms:if >
+      </cms:pages >
     </div>
   </section>
 
