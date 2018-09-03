@@ -603,6 +603,7 @@ a {
  }
  
  .item a {
+     display: block;
      color: #333; }
  
  a:active,
