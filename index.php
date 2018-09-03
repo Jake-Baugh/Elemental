@@ -46,7 +46,7 @@
       <a href="about.html">About</a>
       <a href="clients.php">Clients</a>
       <a href="news-views.php">News &amp; Views</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.php">Contact</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="cookie-policy.html">Cookie Policy</a>
     </div>

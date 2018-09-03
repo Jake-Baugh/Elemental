@@ -26,6 +26,20 @@ aside {
     margin: 0 0 0 6px;
 }
 
+a,
+i,
+span {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .tags {
     display: inline-block;
     /* height: 21px; */
@@ -588,8 +602,8 @@ aside {
      text-decoration: none
  }
  
- a {
-     color: #333;}
+ .item a {
+     color: #333; }
  
  a:active,
  a:focus,

@@ -1,3 +1,4 @@
+<?php require_once( 'cctr/cms.php' ); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,9 +44,9 @@
       <a href="marketing.html">Marketing &amp; Creative</a>
       <a href="pr-comms.html">PR &amp; Communications</a>
       <a href="about.html">About</a>
-      <a href="clients.php">Clients</a>
-      <a href="news-views.php" class="active">News &amp; Views</a>
-      <a href="contact.php">Contact</a>
+      <a href="clients.html">Clients</a>
+      <a href="news-views.html">News &amp; Views</a>
+      <a href="contact.php" class="active">Contact</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="cookie-policy.html">Cookie Policy</a>
     </div>
@@ -71,8 +72,7 @@
           <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-      <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body"
-        type="button">
+      <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -84,7 +84,7 @@
   <header class="masthead-small d-flex" id="bg-clients">
     <div class="container my-auto">
       <div class="col-lg-6 col-md-6 offset-lg-6 offset-md-6 mt-4">
-
+      
       </div>
     </div>
   </header>
@@ -93,84 +93,75 @@
 
   <!-- Portfolio -->
   <section class="content-section bg-white" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <!-- Latest Posts -->
-        <main class="post blog-post col-lg-8 pt-0 pr-5"> 
-            <div class="container">
-                <div class="post-single">
-                  <div class="mb-4 post-thumbnail"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
-                  <div class="post-details">
-                      <h1><cms:show k_page_title /><a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
-                      <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
-      
-                          <div class="d-flex align-items-center flex-wrap">
-                            <div class="blog-title"><span><cms:show blog_author /></span></div>
-                        </a>
-                        <div class="date"></div>
-                        <div class="comments meta-last"></i><cms:show k_page_date /></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2 m-auto">
+                  <div class="contact-form">
+                    <h1>Get in Touch</h1>
+                    <cms:form action='' method='post'>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="inputName">Name*</label>
+                            <cms:input name='name' type="text" class="form-control" id="inputName" required='1' />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="inputEmail">Email*</label>
+                            <cms:input name='email' type="text" class="form-control" id="inputEmail" required='1' />
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group"> <label for="inputOrganisation">Organisation*</label>
+                              <cms:input name='organisation' type="text" class="form-control" id="inputOrganisation" required='1' />
+                            </div>
+                          </div>
+
+                          <div class="col-sm-12">
+                              <div class="form-group">
+                                <label for="inputPhone">Telephone</label>
+                                <cms:input name='phone' type="text" class="form-control" id="inputPhone" />
+                              </div>
+                            </div>
+                      </div>            
+                      <div class="form-group">
+                        <label for="inputSubject">Subject*</label>
+                        <cms:input name='subject' type="text" class="form-control" id="inputSubject" required='1' />
                       </div>
-                    </div>
-                  <div class="post-body">
-                    <cms:show blog_content />
-                  </div>
-                  <div class="posts-nav">
-                    <cms:pages start_on=k_page_date order='asc' limit='1' offset='1'>
-                    <a href="<cms:show k_page_link />" class="prev-post col-6">
-                      <div class="icon prev"><i class="fa fa-angle-left"></i></div>
-                      <div class="text"><strong class="text-primary">Previous Post </strong>
-                        <h6 class="d-none d-sm-block"><cms:show k_page_title /></h6>
+                      <div class="form-group">
+                        <label for="inputMessage">Message*</label>
+                        <cms:input name='message' type='textarea' class="form-control" id="inputMessage" rows="5" required='1' />
                       </div>
-                    </a>
-                    </cms:pages >
-                    <cms:pages stop_before=k_page_date limit='1'>
-                    <a href="<cms:show k_page_link />" class="next-post col-6">
-                      <div class="text"><strong class="text-primary">Next Post </strong>
-                        <h6 class="d-none d-sm-block"><cms:show k_page_title /></h6>
-                      </div>
-                      <div class="icon next"><i class="fa fa-angle-right">   </i></div>
-                    </a>
-                    </cms:pages >
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-lg "><i class="fa fa-paper-plane"></i> Send</button>
+                      </div>            
+                      <cms:if k_success>
+                        <cms:check_spam email=frm_email />
+                        <cms:if k_success>
+                          <cms:send_mail from=k_email_from to=k_email_to subject='Feedback From Your Site'>
+                            The folling is an email sent by a visitor to your site:
+                            <cms:show k_success />
+                          </cms:send_mail>
+                          <cms:if k_success >
+                            <p><strong>Your info has been submitted - Thanks !</strong></p>
+                          </cms:if >
+                        </cms:if >
+                      </cms:if >
+                      <cms:if k_error >
+                         <div class="error">
+                            <cms:each k_error >
+                               <br><cms:show item />
+                            </cms:each>
+                         </div>
+                      </cms:if>
+                    </cms:form>
                   </div>
                 </div>
               </div>
             </div>
-          </main>
-        <aside class="col-lg-4 p-3" style="background-color:#eee">
-
-          <!-- Widget [Latest Posts Widget]        -->
-          <div class="widget latest-posts mb-4">
-            <header>
-              <h3 class="h6">Latest Posts</h3>
-            </header>
-            <cms:pages masterpage='blog.php' limit='3' >
-            <div class="blog-posts"><a href="<cms:show k_page_link />">
-              <div class="item d-flex align-items-center">
-                <div class="image"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
-                <div class="blog-title"><strong><cms:show k_page_title /></strong>
-                  <div class="d-flex align-items-center">
-                    <div class="views"><cms:show blog_author /></div>
-                    <div class="comments"><cms:show k_page_date /></div>
-                  </div>
-                </div>
-              </div>
-            </a></div>
-            </cms:pages >
-          </div>
-          <!-- Widget [Categories Widget]-->
-      <div class="widget categories mb-4">
-        <header>
-          <h3 class="h6">Categories</h3>
-        </header>
-        <cms:folders masterpage='blog.php' >
-          <div class="item d-flex justify-content-between"><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a><span><cms:show k_folder_totalpagecount/></span></div>
-        </cms:folders>
-      </div>
-     </aside>
-    </div>
-    </div>
   </section>
-
 
   <cms:embed 'footer.html' />
 
@@ -197,3 +188,4 @@
 </body>
 
 </html>
+<?php COUCH::invoke(); ?>
