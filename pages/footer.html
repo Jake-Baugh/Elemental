@@ -106,9 +106,9 @@
                     <cms:php>
                         global $CTX;
                         use \DrewM\MailChimp\MailChimp;
-                        $MailChimp = new MailChimp('<cms:get_custom_field 'mc_api_key' masterpage='newsletter.php'/>');
+                        $MailChimp = new MailChimp('<cms:get_custom_field 'mc_api_key' masterpage='mailsettings.php'/>');
             
-                        $result = $MailChimp->post('lists/' . '<cms:get_custom_field 'mc_list_id' masterpage='newsletter.php'/>' . '/members', array(
+                        $result = $MailChimp->post('lists/' . '<cms:get_custom_field 'mc_list_id' masterpage='mailsettings.php'/>' . '/members', array(
                             'email_address' => $CTX->get('frm_email'),
                             'status'        => 'subscribed'
                         ));

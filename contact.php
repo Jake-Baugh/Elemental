@@ -144,7 +144,7 @@
                       <cms:if k_success>
                         <cms:check_spam email=frm_email />
                         <cms:if k_success>
-                          <cms:send_mail from=k_email_from to=k_email_to subject='Feedback From Your Site'>
+                          <cms:send_mail from="<cms:get_custom_field 'contact_from' masterpage='mailsettings.php'/>" to="<cms:get_custom_field 'contact_to' masterpage='mailsettings.php'/>" subject='Feedback From Your Site'>
                             The folling is an email sent by a visitor to your site:
                             <cms:show k_success />
                           </cms:send_mail>

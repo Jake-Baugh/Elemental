@@ -373,11 +373,11 @@
       <div class="row">
         <cms:set global_limit = "<cms:get_custom_field 'records_visible' masterpage='globals.php' />" scope='global' />
         <cms:pages masterpage='blog.php' folder='blog' limit=global_limit >
-        <cms:if k_count gt '3'>
-        <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" style="display:none">
-        <cms:else />
-        <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox">
-        </cms:if >
+          <cms:if k_count gt '3'>
+            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" style="display:none">
+          <cms:else />
+            <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox">
+          </cms:if >
           <div class="item">
             <a href="<cms:show k_page_link />">
               <img src="<cms:show blog_image />">
