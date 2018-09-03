@@ -34,49 +34,7 @@
 
 <body id="page-top">
 
-  <nav id="myNavmenu" class="navmenu navmenu-fixed-right offcanvas" role="navigation">
-    <div class="vertical-menu">
-      <a href="index.php">Home</a>
-      <a href="sales-acceleration.html">Sales Acceleration</a>
-      <a href="data-services.html">Data Services</a>
-      <a href="marketing.html">Marketing &amp; Creative</a>
-      <a href="pr-comms.html">PR &amp; Communications</a>
-      <a href="about.html">About</a>
-      <a href="clients.php" class="active">Clients</a>
-      <a href="news-views.php">News &amp; Views</a>
-      <a href="contact.php">Contact</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="cookie-policy.html">Cookie Policy</a>
-    </div>
-  </nav>
-
-  <div class="navbar navbar-dark navbar-default navbar-fixed-top">
-    <div class="container my-auto">
-
-      <!-- Brand -->
-      <a class="navbar-brand" href="index.php">
-        <img src="img/elemental_logo.svg"></img>
-      </a>
-
-      <!-- Toggler/collapsibe Button -->
-      <div class="ml-auto menu-info d-none d-lg-block">
-        <div class=" d-inline-block contact-info">
-          <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@elemental-solutions.co.uk</p>
-        </div>
-
-        <div class="d-inline-block social-icons">
-          <a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a>
-          <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-      <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-    </div>
-  </div>
+  <cms:embed 'navbar.html' />
 
   <!-- Header -->
   <header class="masthead-medium d-flex" id="bg-clients">
