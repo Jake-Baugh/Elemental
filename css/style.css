@@ -26,6 +26,20 @@ aside {
     margin: 0 0 0 6px;
 }
 
+a,
+i,
+span {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .tags {
     display: inline-block;
     /* height: 21px; */
@@ -527,7 +541,8 @@ aside {
     min-height: 120px;
     font-size: 18px;
     border: 1px solid #000000;
-    padding: 10px;
+    border-radius: .25rem;
+    padding: 30px;
 }
 .carousel .media img {
 	width: 180px;
@@ -587,8 +602,9 @@ aside {
      text-decoration: none
  }
  
- a {
-     color: #333;}
+ .item a {
+     display: block;
+     color: #333; }
  
  a:active,
  a:focus,
@@ -633,7 +649,7 @@ aside {
      border-radius: 0; 
      font-weight: bold;
      color: #616161;
-     font-size: 16px;
+     font-size: 16px;border-radius: .25rem;
  }
  
  .btn:hover {
@@ -816,7 +832,7 @@ aside {
  .statsbox{
      border: 1px solid aliceblue;
      padding: 20px 20px;
-     height:200px;
+     height:200px;border-radius: 4px;
  }
  
  .statcontent {
@@ -829,11 +845,28 @@ aside {
      
  }
  
+ .card-link {
+     text-decoration: underline;
+ }
+
+ .card-link:hover {
+    text-decoration: underline;
+}
  
  .card-body {
-     padding:0px;
-     margin: 20px;
+     padding: 5px;
+     margin: 10px;
  }
+
+ .card-body ul {
+    height:250px;
+    padding-left: 20px;
+
+ }
+
+ .card-body img {
+    width:200px;
+}
  
  .bg-gradient {
      background-image:url("../img/gradient.png");
@@ -864,7 +897,8 @@ aside {
      -webkit-transition: all 0.15s ease-in-out;
      transition: all 0.15s ease-in-out;
      height: 100%;
-     border: 1px #000000 solid;
+     border: 1px #000000 solid; 
+     border-radius: .25rem;
  }
  .blogBox .item:hover {
      background: #f4f4f4;
@@ -872,7 +906,8 @@ aside {
  }
  .blogBox .item img {
      width: 100%;
- }
+     border-top-left-radius: .25rem;border-top-right-radius: .25rem;.;
+}
  .blogBox .item p {
      padding-bottom: 40px;
  }
@@ -933,7 +968,7 @@ aside {
      z-index: 1;
      top: 0px;
      left: 0px;
-     padding: 20px 10px 10px 0px;
+     padding: 10px 10px 10px 0px;
      opacity: 0;
    }
    .newsletter > span.container.active {
@@ -942,7 +977,7 @@ aside {
    }
    .newsletter > span.container.active + .submit {
      z-index: 3;
-     top: 20px;
+     top: 10px;
      opacity: 1;
    }
    .newsletter > span.container > label {
@@ -956,7 +991,7 @@ aside {
      top: 10px;
    }
    .newsletter > span.container > input {
-     padding: 15px;
+     padding: 5px 15px;
      margin: 0;
      width: 100%;
      outline: none;
@@ -965,7 +1000,7 @@ aside {
      font-family: -apple-system, helvetica neue, helvetica, arial, sans-serif;
      font-weight: 200;
      font-size: 18px;
-     line-height: 18px;
+     /* line-height: 18px; */
    }
    .newsletter > span.container .next {
      display: block;
@@ -1004,11 +1039,11 @@ aside {
      line-height: 12px;
      bottom: -10px;
    }
-   .newsletter > span.submit {
+   .newsletter > input.submit {
      display: block;
      position: absolute;
-     height: 53px;
-     width: 53px;
+     height: 39px;
+     width: 83px;color: #fff;
      top: 20px;
      right: 10px;
      text-align: center;
@@ -1020,7 +1055,7 @@ aside {
      overflow: hidden;
      background: #b6b6b6;
    }
-   .newsletter > span.submit:hover {
+   .newsletter > input.submit:hover {
      -webkit-animation: changeBg 1.4s forwards;
      animation: changeBg 1.4s forwards;
      border-top: 1px solid;
@@ -1028,7 +1063,7 @@ aside {
      border-bottom: 1px solid;
      cursor: pointer;
    }
-   .newsletter > span.submit:hover:before {
+   .newsletter > input.submit:hover:before {
      color: white;
    }
    .newsletter > span.submit:before {
@@ -1049,8 +1084,22 @@ aside {
  
  .footer-info li{
      margin-bottom: 5px;
-     color: #efefef !important;
+     /* color: #efefef; */
  }
+
+ .footer-info li a:hover{
+    color: #888;
+}
+
+ .news-footer a {
+     color:#fff;
+ }
+
+ .footer-info a:hover, footer a:hover {
+    -webkit-animation: changeColor 2.4s forwards;
+    animation: changeColor 2.4s forwards;
+}
+
  
  @media screen and (min-width: 1200px) {
    .blogBox .featured h2 {
@@ -1205,6 +1254,18 @@ aside {
              left:48.75%
          }
 
+         .card-body .icon {
+             width:120px;
+         }
+
+         .service-p {
+             height:100px;
+         }
+
+        a .text {
+             width:100%;
+         }
+
          /*==================================================
 =            Bootstrap Media Queries             =
 ==================================================*/
@@ -1311,7 +1372,7 @@ aside {
             font-size:46px;
          }
          .title h3 {
-            font-size:42px;
+            font-size:42px;font-weight: 300;
          }
 
          .service-icon ul {
@@ -1326,21 +1387,63 @@ aside {
 
     /* Large Devices, Wide Screens */
     @media only screen and (max-width : 1200px) {
+        .col-lg-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
 
+        .card-body ul {
+            padding:20px 50px;
+            font-size:18px;
+        }
+    }
+
+    @media only screen and (max-width : 1100px) {
+        .col-lg-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .card-title {
+            font-size: 28px;
+        }
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
-
+        .col-lg-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .card-title {
+            font-size: 28px;
+        }
+        .card-body ul {
+            padding:20px 40px;
+            font-size:17px;
+        }
     }
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
-
+        .col-lg-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .card-title {
+            font-size: 22px;
+        }
+        .card-body ul {
+            padding:20px 30px;
+            font-size:14px;
+        }
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
+        .col-lg-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
        .masthead {
         min-height: 24rem;
         position: relative;

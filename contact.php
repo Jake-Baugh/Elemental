@@ -38,7 +38,7 @@
 
   <nav id="myNavmenu" class="navmenu navmenu-fixed-right offcanvas" role="navigation">
     <div class="vertical-menu">
-      <a href="index.html">Home</a>
+      <a href="index.php">Home</a>
       <a href="sales-acceleration.html">Sales Acceleration</a>
       <a href="data-services.html">Data Services</a>
       <a href="marketing.html">Marketing &amp; Creative</a>
@@ -56,7 +56,7 @@
     <div class="container my-auto">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="img/elemental_logo.svg"></img>
       </a>
 

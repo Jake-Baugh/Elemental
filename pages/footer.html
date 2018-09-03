@@ -24,7 +24,7 @@
               <a href="about.html">
                 <li>About</li>
               </a>
-              <a href="contact.html">
+              <a href="contact.php">
                 <li>Contact</li>
               </a>
             </ul>
@@ -74,9 +74,9 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
             <h4 class="mb-4">News and views</h4>
-            <div>
-                <cms:pages masterpage='blog.php' limit='3' >
-                <h6 class="pb-3"><cms:show k_page_title /><span class="tags"><cms:show k_page_foldertitle /></span></h6>
+            <div class="news-footer">
+                <cms:pages masterpage='blog.php' limit='5' >
+                    <a href="<cms:show k_page_link />"<h6 class="pb-3"><cms:show k_page_title /><span class="tags"><cms:show k_page_foldertitle /></span></h6></a>
                 </cms:pages >
             </div>
           </div>
@@ -85,13 +85,13 @@
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
             <h4 class="mb-4">Get in touch</h4>
             <ul class="footer-info mb-4">
-              <a href="#!">
+           
                 <li>7 All Hallows Road, Paignton, Devon TQ3 1EB</li>
-              </a>
-              <a href="#!">
+             
+              <a href="tel:08081686426">
                 <li>Phone: 0808 168 6426</li>
               </a>
-              <a href="#!">
+              <a href="mailto:hello@elemental-solutions.co.uk">
                 <li>Email: hello@elemental-solutions.co.uk</li>
               </a>
             </ul>
@@ -121,16 +121,18 @@
                         }
                     </cms:php>
                 <cms:else/>
-                    <cms:if k_error>
-                        <div class="notice">Please enter a valid email address.</div>
-                    </cms:if>
                     <span class="container active">
                     <cms:input class="required" type="email" id="email" name='email' placeholder='Email Address' required='1' type='text' validator='email'/>
                     </span>
-                    <input type="submit" value="Subscribe to Newsletter">
+                    <input class="submit" type="submit" value="Send">
                 </cms:if>
+                <cms:if k_error>
+                        <div class="notice">Please enter a valid email address.</div>
+                    </cms:if>
             </cms:form>
           <!-- Grid column -->
+  
+
   
         </div>
         <!-- Footer links -->
