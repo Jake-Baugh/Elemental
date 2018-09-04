@@ -262,80 +262,44 @@
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Carousel indicators -->
             <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <cms:pages masterpage="testimonials.php" folder='pr-comms' >
+              <cms:set cnt = "<cms:sub k_count '1' />"/>
+              <cms:if cnt eq '0' >
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <cms:else />
+                <li data-target="#myCarousel" data-slide-to="<cms:show cnt />"></li>
+              </cms:if >
+              </cms:pages >
             </ol>
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
-              <div class="item carousel-item active">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="media">
-
-                      <div class="col-xs-12 col-md-9">
-                        <div class="testimonial">
-                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
-                            quam luctus
-                            dui. Mauris magna metus nec.</p>
-                          <p class="overview">
-                            <b class="text-air">Client Name</b>, Client Organisation</p>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-3">
-                        <a href="#">
-                          <img src="img/client/Restart-testimonial.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="item carousel-item">
+              <cms:pages masterpage="testimonials.php" folder='pr-comms' >
+              <cms:if k_count eq '1' >
+                <div class="item carousel-item active">
+              <cms:else />
+                <div class="item carousel-item">
+              </cms:if >
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="media">
                       <div class="col-xs-12 col-md-9">
                         <div class="testimonial">
-                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
-                            quam luctus
-                            dui. Mauris magna metus nec.</p>
+                          <p><cms:show ct_text /></p>
                           <p class="overview">
-                            <b class="text-air">Client Name</b>, Client Organisation</p>
+                            <b class="text-earth"><cms:show ct_name /></b>, <cms
+:show ct_organisation /></p>
                         </div>
                       </div>
                       <div class="col-xs-12 col-md-3">
                         <a href="#">
-                          <img src="img/client/Medelinked-testimonial.png" alt="">
+                          <img src="<cms:show ct_image />" alt="">
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="item carousel-item">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="media">
-                      <div class="col-xs-12 col-md-9">
-                        <div class="testimonial">
-                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
-                            quam luctus
-                            dui. Mauris magna metus nec.</p>
-                          <p class="overview">
-                            <b class="text-air">Client Name</b>, Client Organisation</p>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-md-3">
-                        <a href="#">
-                          <img src="img/client/Zesty-testimonial.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </cms:pages >
             </div>
           </div>
         </div>
