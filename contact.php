@@ -122,7 +122,7 @@
                         <cms:check_spam email=frm_email />
                         <cms:if k_success>
                           <cms:send_mail from="<cms:get_custom_field 'contact_from' masterpage='mailsettings.php'/>" to="<cms:get_custom_field 'contact_to' masterpage='mailsettings.php'/>" subject='Feedback From Your Site'>
-                            The folling is an email sent by a visitor to your site:
+                            The following message is from your site contact form:
                             <cms:show k_success />
                           </cms:send_mail>
                           <cms:if k_success >
