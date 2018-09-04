@@ -412,7 +412,7 @@
           <div class="text-center col-md-8 offset-md-2">
           <div class="offer text-center">
             <h1 class="text-white">Work at elemental</h1>
-            <p class="h3 text-white">Listen to clients. Understand clients. Execute your ideas. Take ownership. Learn
+            <p class="text-white">Listen to clients. Understand clients. Execute your ideas. Take ownership. Learn
               all the time. Solve problems. Deliver results. Eat biscuits. have fun. The life of a co-worker at
               Elemental.</p>
           </div>

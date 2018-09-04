@@ -201,7 +201,7 @@
   </section>
 
   <section class="bg-light">
-    <div class="container">
+  <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -218,15 +218,16 @@
                   <div class="col-sm-12">
                     <div class="media">
 
-                      <div class="media-body">
+                      <div class="col-xs-12 col-md-9">
                         <div class="testimonial">
-                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius quam luctus
+                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
+                            quam luctus
                             dui. Mauris magna metus nec.</p>
                           <p class="overview">
                             <b class="text-water">Client Name</b>, Client Organisation</p>
                         </div>
                       </div>
-                      <div class="media-right d-flex mr-4">
+                      <div class="col-xs-12 col-md-3">
                         <a href="#">
                           <img src="img/client/Restart-testimonial.png" alt="">
                         </a>
@@ -240,19 +241,20 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="media">
-                        <div class="media-body">
-                            <div class="testimonial">
-                              <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius quam luctus
-                                dui. Mauris magna metus nec.</p>
-                              <p class="overview">
-                                <b class="text-water">Client Name</b>, Client Organisation</p>
-                            </div>
-                          </div>
-                          <div class="media-right d-flex mr-4">
-                            <a href="#">
-                              <img src="img/client/Medelinked-testimonial.png" alt="">
-                            </a>
-                          </div>
+                      <div class="col-xs-12 col-md-9">
+                        <div class="testimonial">
+                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
+                            quam luctus
+                            dui. Mauris magna metus nec.</p>
+                          <p class="overview">
+                            <b class="text-water">Client Name</b>, Client Organisation</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-3">
+                        <a href="#">
+                          <img src="img/client/Medelinked-testimonial.png" alt="">
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -261,19 +263,20 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="media">
-                        <div class="media-body">
-                            <div class="testimonial">
-                              <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius quam luctus
-                                dui. Mauris magna metus nec.</p>
-                              <p class="overview">
-                                <b class="text-water">Client Name</b>, Client Organisation</p>
-                            </div>
-                          </div>
-                          <div class="media-right d-flex mr-4">
-                            <a href="#">
-                              <img src="img/client/Zesty-testimonial.png" alt="">
-                            </a>
-                          </div>
+                      <div class="col-xs-12 col-md-9">
+                        <div class="testimonial">
+                          <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
+                            quam luctus
+                            dui. Mauris magna metus nec.</p>
+                          <p class="overview">
+                            <b class="text-water">Client Name</b>, Client Organisation</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-md-3">
+                        <a href="#">
+                          <img src="img/client/Zesty-testimonial.png" alt="">
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

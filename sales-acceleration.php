@@ -230,7 +230,7 @@
                   <div class="col-sm-12">
                     <div class="media">
 
-                      <div class="media-body">
+                      <div class="col-xs-12 col-md-9">
                         <div class="testimonial">
                           <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
                             quam luctus
@@ -239,7 +239,7 @@
                             <b class="text-fire">Client Name</b>, Client Organisation</p>
                         </div>
                       </div>
-                      <div class="media-right d-flex mr-4">
+                      <div class="col-xs-12 col-md-3">
                         <a href="#">
                           <img src="img/client/Restart-testimonial.png" alt="">
                         </a>
@@ -253,7 +253,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="media">
-                      <div class="media-body">
+                      <div class="col-xs-12 col-md-9">
                         <div class="testimonial">
                           <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
                             quam luctus
@@ -262,7 +262,7 @@
                             <b class="text-fire">Client Name</b>, Client Organisation</p>
                         </div>
                       </div>
-                      <div class="media-right d-flex mr-4">
+                      <div class="col-xs-12 col-md-3">
                         <a href="#">
                           <img src="img/client/Medelinked-testimonial.png" alt="">
                         </a>
@@ -275,7 +275,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="media">
-                      <div class="media-body">
+                      <div class="col-xs-12 col-md-9">
                         <div class="testimonial">
                           <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius
                             quam luctus
@@ -284,7 +284,7 @@
                             <b class="text-fire">Client Name</b>, Client Organisation</p>
                         </div>
                       </div>
-                      <div class="media-right d-flex mr-4">
+                      <div class="col-xs-12 col-md-3">
                         <a href="#">
                           <img src="img/client/Zesty-testimonial.png" alt="">
                         </a>
