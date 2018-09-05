@@ -1,17 +1,17 @@
 
   <nav id="myNavmenu" class="navmenu navmenu-fixed-right offcanvas" role="navigation">
     <div class="vertical-menu">
-      <a href="index.php" class="active">Home</a>
-      <a href="sales-acceleration.php">Sales Acceleration</a>
-      <a href="data-services.php">Data Services</a>
-      <a href="marketing.php">Marketing &amp; Creative</a>
-      <a href="pr-comms.php">PR &amp; Communications</a>
-      <a href="about.php">About</a>
-      <a href="clients.php">Clients</a>
-      <a href="news-views.php">News &amp; Views</a>
-      <a href="contact.php">Contact</a>
-      <a href="privacy-policy.php">Privacy Policy</a>
-      <a href="cookie-policy.php">Cookie Policy</a>
+      <a href="<cms:link 'index.php' />" <cms:if k_template_name == 'index.php'> class="active" </cms:if> >Home</a>
+      <a href="<cms:link 'sales-acceleration.php' />" <cms:if k_template_name == 'sales-acceleration.php'> class="active" </cms:if>>Sales Acceleration</a>
+      <a href="<cms:link 'data-services.php' />"<cms:if k_template_name == 'data-services.php'> class="active" </cms:if>>Data Services</a>
+      <a href="<cms:link 'marketing.php' />"<cms:if k_template_name == 'marketing.php'> class="active" </cms:if>>Marketing &amp; Creative</a>
+      <a href="<cms:link 'pr-comms.php' />"<cms:if k_template_name == 'pr-comms.php'> class="active" </cms:if>>PR &amp; Communications</a>
+      <a href="<cms:link 'about.php' />"<cms:if k_template_name == 'about.php'> class="active" </cms:if>>About</a>
+      <a href="<cms:link 'clients.php' />"<cms:if k_template_name == 'clients.php'> class="active" </cms:if>>Clients</a>
+      <a href="<cms:link 'news-views.php' />"<cms:if k_template_name == 'news-views.php'> class="active" </cms:if>>News &amp; Views</a>
+      <a href="<cms:link 'contact.php' />"<cms:if k_template_name == 'contact.php'> class="active" </cms:if>>Contact</a>
+      <a href="<cms:link 'privacy-policy.php' />"<cms:if k_template_name == 'privacy-policy.php'> class="active" </cms:if>>Privacy Policy</a>
+      <a href="<cms:link 'cookie-policy.php' />"<cms:if k_template_name == 'cookie-policy.php'> class="active" </cms:if>>Cookie Policy</a>
     </div>
   </nav>
 
