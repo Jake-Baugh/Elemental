@@ -1,5 +1,5 @@
 <?php require_once( 'cctr/cms.php' ); ?>
-  <cms:template title='Blog' clonable='1' commentable='0'>
+  <cms:template title='Pages' clonable='1' commentable='0'>
   <cms:editable name='blog_image' type='image' />
   <cms:editable name='blog_author' type='text' label='Author' />
   <cms:editable name='blog_content' type='richtext' />

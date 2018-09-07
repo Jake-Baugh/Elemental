@@ -57,7 +57,7 @@
           <!-- Latest Posts -->
           <main class="posts-listing col-lg-8">
             <div class="container">
-              <cms:pages masterpage='blog.php' folder=k_folder_name paginate='1' limit='4' >
+              <cms:pages masterpage='pages.php' folder=k_folder_name paginate='1' limit='4' >
               <div class="row">
                 <!-- post -->
                 <div class="post row">
@@ -117,7 +117,7 @@
               <header>
                 <h3 class="h6">Latest Posts</h3>
               </header>
-              <cms:pages masterpage='blog.php' limit='3' >
+              <cms:pages masterpage='pages.php' limit='3' >
               <div class="blog-posts"><a href="<cms:show k_page_link />">
                 <div class="item d-flex align-items-center">
                   <div class="image"><img src="<cms:show blog_image />" alt="..." class="img-fluid"></div>
@@ -136,7 +136,7 @@
               <header>
                 <h3 class="h6">Categories</h3>
               </header>
-              <cms:folders masterpage='blog.php' >
+              <cms:folders masterpage='pages.php' >
                 <div class="item d-flex justify-content-between"><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a><span><cms:show k_folder_totalpagecount/></span></div>
               </cms:folders>
             </div>
