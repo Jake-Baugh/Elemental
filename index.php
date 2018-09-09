@@ -701,7 +701,7 @@
               
               <a href="<cms:show k_page_link />"><h5><cms:show k_page_title /></h5></a>
               <p class="post_intro hidden-xs">
-                <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
+                <cms:excerpt count='25' ><cms:show blog_content /></cms:excerpt>
               </p>
             </div>
           </div>
@@ -737,7 +737,7 @@
               <span class="tags"><cms:show k_page_foldertitle /></span>
               <a href="<cms:show k_page_link />"><h5><cms:show k_page_title /></h5></a>
               <p class="post_intro hidden-xs">
-                <cms:excerpt count='40' ><cms:show blog_content /></cms:excerpt>
+                <cms:excerpt count='25' ><cms:show blog_content /></cms:excerpt>
               </p>
             </div>
           </div>

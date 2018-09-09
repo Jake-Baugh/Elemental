@@ -1,6 +1,6 @@
 <?php require_once( 'cctr/cms.php' ); ?>
 
-<cms:template title='Client Testimonials' clonable='1' commentable='0'>
+<cms:template title='Client Testimonials' clonable='1' commentable='0' order='5'>
   <cms:editable name='ct_image' label='Logo Image' type='image' />
   <cms:editable name='ct_name' label='Client Name' type='text' />
   <cms:editable name='ct_organisation' label='Organisation' type='text' />
