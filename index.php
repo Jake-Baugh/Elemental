@@ -86,8 +86,8 @@
                   <ul class="text-left mb-4">
                     <li>Bespoke builds or managed service</li>
                     <li>Market intelligence research</li>
-                    <li>Data lines without gaps</li>
-                    <li>100% data accuracy</li>
+                    <li>Data without gaps</li>
+                    <li>No usage restrictions</li>
                     <li>Quicker than in-house admins</li>
                     <li>Over 1 million lines of NHS data built</li>
                   </ul>
@@ -131,89 +131,6 @@
               </div>
             </div>
           </div>
-      <!--<div class="row mb-4 mt-4">
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <div class="service-icon mx-auto pb-3 text-white" style="height:580px" id="fire">
-            <h4 class="service-title pt-2 mb-2">Sales
-              <br/>Acceleration</h4>
-            <ul class="mb-4">
-              <li>Up to 1000% ROI on starter campaigns</li>
-              <li>Better qualified prospects</li>
-              <li>Build a predictable
-                <br/>pipeline</li>
-              <li>50% back if results not hit in 12-months</li>
-              <li>20+ years NHS IT market experience</li>
-            </ul>
-            <div class="col-md-12 mb-3">
-              <img src="img/fire.png" width="60%"></img>
-
-            </div>
-            <a href="sales-acceleration.html" class="text-white"><h5>I want more leads</h5></a>
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <div class="service-icon mx-auto pb-3 text-white" style="height:580px" id="earth">
-            <h4 class="service-title pt-2 mb-2">Data
-              <br/>Services</h4>
-            <ul class="mb-4">
-              <li>Bespoke builds or managed service</li>
-              <li>Market intelligence research</li>
-              <li>Data lines without gaps</li>
-              <li>100% data accuracy</li>
-              <li>Quicker than in-house admins</li>
-              <li>Over 1 million lines of NHS data built</li>
-
-
-            </ul>
-            <div class="col-md-12 mb-3">
-              <img src="img/earth.png" width="60%"></img>
-
-            </div>
-            <a href="data-services.html" class="text-white"><h5>Give me good data</h5></a>
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <div class="service-icon mx-auto pb-3 text-white" style="height:580px" id="water">
-            <h4 class="service-title pt-2 mb-2">Marketing &amp; Creative</h4>
-            <ul class="mb-4">
-              <li>Focus on ROI and best results</li>
-              <li>Strategic planning to tactical delivery</li>
-              <li>Integrated digital campaigns</li>
-              <li>Brand development &amp; creative collateral</li>
-              <li>Video production and animation</li>
-            </ul>
-            <div class="col-md-12 mb-3">
-              <img src="img/water.png" width="60%"></img>
-
-            </div>
-            <a href="marketing.html" class="text-white"><h5>Make me look great</h5></a>
-
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <div class="service-icon mx-auto pb-3 text-white" style="height:580px" id="air">
-            <h4 class="service-title pt-2 mb-2">PR &amp; Communications</h4>
-            <ul class="mb-4">
-              <li>NHS IT PR specialists</li>
-              <li>From planning
-                <br/>to end-product</li>
-              <li>Messaging &amp; positioning</li>
-              <li>Thought leadership &amp; social media</li>
-              <li>Content that gets media attention</li>
-              <li>Measurable results</li>
-              <li>Transparent pricing</li>
-            </ul>
-            <div class="col-md-12 mb-3">
-              <img src="img/air.png" width="60%"></img>
-
-            </div>
-            <a href="pr-comms.html" class="text-white"><h5>Build my brand</h5></a>
-
-          </div>
-        </div>
-      </div>-->
     </div>
   </section>
 
@@ -226,8 +143,8 @@
           <h4 class="mb-3">Results-based. NHS IT experience. Innovative approach.</h4>
           <p class="mb-4">We believe there is a better way to helping sales, marketing and business development directors in the digital
             heath sector manage data, develop pipeline, raise profile and hit targets.</p>
-          <a href="about.html#purpose" class="btn btn-lg mr-4 mb-4">Find out more</a>
-          <a href="about.html#team" class="btn btn-lg mb-4">Meet the team</a>
+          <a href="about.php#purpose" class="btn btn-lg mr-4 mb-4">Find out more</a>
+          <a href="about.php#team" class="btn btn-lg mb-4">Meet the team</a>
         </div>
         <div class="col-md-7 col-sm-12">
           <div class="word-cloud">
@@ -276,7 +193,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="statsbox col-md-12 mb-4">
             <div class="statcontent">
-              <h3 class='numscroller' data-min='0' data-max='30' data-delay="2" data-increment='1'>30</h3>
+              <h3 class='numscroller' data-min='0' data-max='50' data-delay="1" data-increment='1'>50</h3>
               <h3 class="numscroller">&nbsp;years</h3>
               <p>Combined NHS IT market experience</p>
             </div>

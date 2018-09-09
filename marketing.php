@@ -44,7 +44,7 @@
         <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
           <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@elemental-solutions.co.uk</p>
+          <p>Email: hello@weareelemental.uk</p>
         </div>
      
         <div class="d-inline-block social-icons"><a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a><a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a></div>
@@ -196,7 +196,7 @@
         <div class="col-md-4">
           <h3 class="text-water">Transparent <br/>pricing</h3>
           <hr>
-          <p>Plan and manage your budgets with our clear pricing structure, and waste no time haggling over hidden costs.</p>
+          <p>Plan and manage your budgets with our clear pricing structure, and waste no time <br/>haggling over hidden costs.</p>
         </div>
       </div>
     </div>

@@ -44,7 +44,7 @@
         <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
           <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@elemental-solutions.co.uk</p>
+          <p>Email: hello@weareelemental.uk</p>
         </div>
      
         <div class="d-inline-block social-icons"><a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a><a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a></div>
@@ -170,7 +170,7 @@
           <img class="d-none d-md-block" src="img/icon-crosshair.svg" width="60%" />
         </div>
         <div class="col-md-10 text-left">
-          <h4 class="text-earth">100% data accuracy</h4>
+          <h4 class="text-earth">Accurate data</h4>
           <p class="text-grey">If there is an email bounce-back, we’ll find out why. If someone has changed jobs, we’ll see who has taken over.
             On the rare occasion there is a discrepancy, we won’t sleep until its sorted.</p>
 
@@ -200,7 +200,7 @@
           <h3 class="text-earth">Faster than your in-house admin</h3>
           <hr>
           <p>It typically takes 7 weeks less for us to do the same data build as an administrator. How? Because we are skilled
-            at researching and managing data. It also helps that we have over 20+ years of B2B data builds in healthcare.</p>
+            at researching and managing data. It also helps that we have over 20+ years of B2B data <br/>builds in healthcare.</p>
         </div>
         <div class="col-md-4">
           <h3 class="text-earth">Invaluable market insight</h3>

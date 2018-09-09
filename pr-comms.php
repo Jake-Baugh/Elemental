@@ -44,7 +44,7 @@
         <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
           <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@elemental-solutions.co.uk</p>
+          <p>Email: hello@weareelemental.uk</p>
         </div>
      
         <div class="d-inline-block social-icons"><a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a><a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a></div>
@@ -83,7 +83,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12 mb-5">
-          <h3 class="text-air">We market great companies, in style</h3>
+          <h3 class="text-air">We do PR</h3>
         </div>
       </div>
       <div class="row">
@@ -93,7 +93,7 @@
                 <img class="icon p-4" src="img/icon-bubble.svg"></img>
                 <h4 class="card-title">PR &amp; comms
                     <br/>strategy</h4>
-                <p class="service-p mb-4">High-level guidance on messaging and positioning, along with actionable plans to get attention in a crowded marketplace</p>
+                <p class="service-p mb-4">Guidance on messaging and positioning along with actionable plans or projects</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
               <div class="card-body">
                 <img class="icon p-4" src="img/icon-writing.svg"></img>
                 <h4 class="card-title">Content &amp; <br />copywriting</h4>
-                <p class="service-p mb-4">Engage and influence your audiences with high-impact, interesting content, that they want to shares</p>
+                <p class="service-p mb-4">Engage and influence your audiences with high-impact, interesting content that they want to share</p>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@
         <div class="col-md-10 text-left">
 
           <h4 class="text-air">Content creation</h4>
-          <p class="text-grey">Improve your engagement rates with shareable content such as infographics, animations, blogs promotes your messages and values.</p>
+          <p class="text-grey">Improve your engagement rates with shareable content such as infographics, animations, blogs to promote your messages and values.</p>
 
         </div>
 
@@ -196,12 +196,12 @@
         <div class="col-md-4">
           <h3>Generate brand awareness</h3>
           <hr>
-          <p>People will gossip about you, in a good way. Get noticed and get into conversations of your stakeholders</p>
+          <p>People will gossip about you, in a good way. Get noticed and get into the conversations of your stakeholders</p>
         </div>
         <div class="col-md-4">
           <h3>Influence the influencers</h3>
           <hr>
-          <p>Target your communications at those with big following.</p>
+          <p>Target your communications to those with a big profile and following to influence your audience.</p>
         </div>
         <div class="col-md-4">
           <h3>Launch a product or service, in style</h3>

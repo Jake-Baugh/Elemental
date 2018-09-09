@@ -86,13 +86,6 @@
       </div>
       <div class="row text-center pb-4">
         <div class="col-md-4">
-          <h3 class="">Results</h3>
-          <hr>
-          <p>We are an experienced team of business development and marketing veterans, focused on delivering
-            exceptional results in a variety of niched sectors. Our strength is our focus and we focus on results.</p>
-
-        </div>
-        <div class="col-md-4">
           <h3 class="">Ownership</h3>
           <hr>
           <p>
@@ -104,9 +97,14 @@
         <div class="col-md-4">
           <h3 class="">Experience</h3>
           <hr>
-          <p>Elemental has grown and delivers strategic business development, telemarketing, data and creative
-            solutions. Elemental has worked with healthcare technology companies for over 12 years, drawing on a
-            diverse range of experience.</p>
+          <p>Elemental has developed impressively in recent years and is now an established Growth Agency delivering strategic business development, sales acceleration, data, marketing, creative and PR solutions. Elemental has worked with healthcare technology companies for over 12 years, drawing on a diverse range of experience.</p>
+
+        </div>
+        <div class="col-md-4">
+          <h3 class="">Results</h3>
+          <hr>
+          <p>We are an experienced team of business development and marketing veterans, focused on delivering
+            exceptional results in a variety of niched sectors. Our strength is our focus and we focus on results.</p>
 
         </div>
       </div>
@@ -399,7 +397,16 @@
           </div>
         </div>
 
+        <div class="person" data-pos="12" style="background-image: url('img/team-placeholder-example2.jpg');">
+          <div class="meta">
+            <h3>Mark Portlock</h3>
+            <h4>Sales Specialist</h4>
+            <p>Mark is a successful sales leader, with over 25 years’ experience and a history of exceeding sales targets, growing market share and improving profit margins. He has vast knowledge and a specialist understanding of the NHS and public sector marketplace and has built an impressive network of C-level contacts within the UK and across EMEA. 
 
+<br/><br/>Having delivered significant new business for a large number of tier one system integrators, partners, and numerous specialist suppliers, he has an in-depth understanding of the public sector buying process. Companies approach Mark for strategic advice and delivery support for a variety of commercial activity including reviewing and redesigning sales processes, market entry plans, evaluation of market performance, sales appraisals, and much more. 
+            </p>
+          </div>
+        </div>
 
 
 
@@ -415,7 +422,7 @@
           <div class="offer text-center">
             <h1 class="text-white">Work at elemental</h1>
             <p class="text-white">Listen to clients. Understand clients. Execute your ideas. Take ownership. Learn
-              all the time. Solve problems. Deliver results. Eat biscuits. have fun. The life of a co-worker at
+              all the time. Solve problems. Deliver results. Eat biscuits. Have fun. The life of a co-worker at
               Elemental.</p>
           </div>
         </div>
@@ -429,7 +436,7 @@
       <div class="row">
         <div class="col-md-8 pl-4 my-auto">
           <h3>Stay in touch</h3>
-          <p>We are always happy to have a chat with talented people that can have a hunger to exceed expectations for
+          <p>We are always happy to have a chat with talented people that have a hunger to exceed expectations for
             our clients, and never want to stop learning.
 
             <br /><br />If you are interested in working in a dynamic growth agency and have experience in sales,

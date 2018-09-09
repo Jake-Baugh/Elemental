@@ -44,7 +44,7 @@
         <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
           <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@elemental-solutions.co.uk</p>
+          <p>Email: hello@weareelemental.uk</p>
         </div>
      
         <div class="d-inline-block social-icons"><a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a><a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a></div>
@@ -190,7 +190,7 @@
       </div>
       <div class="row text-center pb-4">
         <div class="col-md-4">
-          <h3 class="text-fire">Telemarketing agenies, step aside</h3>
+          <h3 class="text-fire">Telemarketing agencies, step aside</h3>
           <hr>
           <p>
             We outperform traditional, tired telemarketing agencies by using a pioneering mix of extensive market
