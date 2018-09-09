@@ -746,6 +746,10 @@ section.latest-posts header {
   }
 }
 
+.post-body ul {
+    padding-left: 40px;
+}
+
 /*
 * ==========================================================
 *     NEWSLETTER SECTION
@@ -1033,14 +1037,14 @@ main.posts-listing .post-footer {
 
 .widget.latest-posts .image {
   min-width: 60px;
-  max-width: 60px;
-  height: 60px;
+  max-width: 70px;
+  height: auto;
   overflow: hidden;
   margin-right: 20px;
 }
 
 .widget.latest-posts .item {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .widget.latest-posts strong {
@@ -1331,7 +1335,7 @@ line-height: 1.15em;
   min-height: 150px;
 }
 
-blockquote.blockquote {
+blockquote {
   font-size: 1.05em;
   line-height: 1.7em;
   border-color: #999;
@@ -1343,7 +1347,7 @@ blockquote.blockquote {
   margin-bottom: 30px;
 }
 
-blockquote.blockquote p {
+blockquote p {
   margin-bottom: 15px !important;
 }
 

@@ -136,6 +136,10 @@ a {
  h6 {
      font-weight: 700
  }
+
+ .h5 {
+    font-weight:300;
+ }
  
  h2 {
      font-size: 48px;
@@ -1129,7 +1133,7 @@ a {
  }
  @media screen and (min-width: 768px) {
    .blogBox .item img {
-     height: 200px;
+     height: auto;
    }
  }
 
