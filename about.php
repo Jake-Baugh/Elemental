@@ -1,4 +1,5 @@
 <?php require_once( 'cctr/cms.php' ); ?>
+<cms:template hidden='1' order='20' />
 <!DOCTYPE html>
 <html lang="en">
 
