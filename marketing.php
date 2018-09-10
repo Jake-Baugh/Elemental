@@ -234,8 +234,7 @@
                         <div class="testimonial">
                           <p><cms:show ct_text /></p>
                           <p class="overview">
-                            <b class="text-earth"><cms:show ct_name /></b>, <cms
-:show ct_organisation /></p>
+                            <b class="text-water"><cms:show ct_name /></b>, <cms:show ct_organisation /></p>
                         </div>
                       </div>
                       <div class="col-xs-12 col-md-3">
