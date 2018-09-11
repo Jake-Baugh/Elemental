@@ -1279,7 +1279,13 @@ a {
 
     /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
-        #bg-main:after, #bg-ds:after {
+        #bg-main:after {
+            background-position-x: -3%;
+            background-position-y: 60%;
+            background-size: 600px;
+        }
+        
+        #bg-ds:after {
             background-position: -5%; 
             background-size: 700px;
         }
