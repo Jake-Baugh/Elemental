@@ -460,7 +460,7 @@
 
         </div>
         <div class="col-md-4 d-none d-md-block">
-          <img src="img/elemental-about.jpg" width="100%" />
+          <img src="img/elemental-about2.jpg" width="100%" />
         </div>
       </div>
     </div>
