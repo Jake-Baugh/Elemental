@@ -86,18 +86,18 @@
             <h4 class="mb-4">Get in touch</h4>
             <ul class="footer-info mb-4">
            
-                <li>7 All Hallows Road, Paignton, Devon TQ3 1EB</li>
+              <li><cms:get_custom_field 'address' masterpage='globals.php' /></li>
              
-              <a href="tel:08081686426">
-                <li>Phone: 0808 168 6426</li>
+                <a href="tel:<cms:get_custom_field 'phone' masterpage='globals.php' />">
+                <li>Phone: <cms:get_custom_field 'phone' masterpage='globals.php' /></li>
               </a>
-              <a href="mailto:hello@weareelemental.uk">
-                <li>Email: hello@weareelemental.uk</li>
+              <a href="mailto:<cms:get_custom_field 'email' masterpage='globals.php' />">
+                <li>Email: <cms:get_custom_field 'email' masterpage='globals.php' /></li>
               </a>
             </ul>
             <div class="footer-icons">
-              <a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a>
-              <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
+              <a href="<cms:get_custom_field 'twitter_url' masterpage='globals.php' />"><i class="fab fa-twitter-square"></i></a>
+              <a href="<cms:get_custom_field 'linkedin_url' masterpage='globals.php' />"><i class="fab fa-linkedin"></i></a>
             </div>
             <hr color="#fff">
             <h4>Sign up to our newsletter</h4>

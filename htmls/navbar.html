@@ -26,13 +26,13 @@
       <!-- Toggler/collapsibe Button -->
       <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
-          <p>Phone: 0808 168 6426</p>
-          <p>Email: hello@weareelemental.uk</p>
+          <p>Phone: <cms:get_custom_field 'phone' masterpage='globals.php' /></p>
+          <p>Email: <cms:get_custom_field 'email' masterpage='globals.php' /></p>
         </div>
 
         <div class="d-inline-block social-icons">
-          <a href="https://twitter.com/Elemental_BD"><i class="fab fa-twitter-square"></i></a>
-          <a href="https://www.linkedin.com/company/bdms-uk"><i class="fab fa-linkedin"></i></a>
+          <a href="<cms:get_custom_field 'twitter_url' masterpage='globals.php' />"><i class="fab fa-twitter-square"></i></a>
+          <a href="<cms:get_custom_field 'linkedin_url' masterpage='globals.php' />"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <button class="navbar-toggle navbar-toggler" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" type="button">
