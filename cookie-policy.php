@@ -89,9 +89,9 @@
 
 <h5>Owner and Data Controller</h5>
 
-<p>Elemental Solutions 7 All Hallows Road, Paignton, Devon TQ3 1EB
-    <br/>Phone: 0808 168 6426
-    <br/>Owner contact email: corrie@bdmsuk.com</li>
+<p>Elemental Solutions <cms:get_custom_field 'address' masterpage='globals.php' /> 
+    <br/>Phone: <cms:get_custom_field 'phone' masterpage='globals.php' />
+    <br/>Owner contact email: <cms:get_custom_field 'owner_email' masterpage='globals.php' /></li>
   </p>
 
 <p>Since the installation of third-party Cookies and other tracking systems through the services used within this Application cannot be technically controlled by the Owner, any specific references to Cookies and tracking systems installed by third parties are to be considered indicative. In order to obtain complete information, the User is kindly requested to consult the privacy policy for the respective third-party services listed in this document.

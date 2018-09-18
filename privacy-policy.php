@@ -58,9 +58,9 @@
           <div class="row">
               <div class="col-md-8 col-md-offset-2 m-auto">
                   <h3>Owner and Data Controller</h3>
-                  <p>Elemental Solutions 7 All Hallows Road, Paignton, Devon TQ3 1EB 
-                  <br/>Phone: 0808 168 6426
-                  <br/>Owner contact email: corrie@bdmsuk.com</p>
+                  <p>Elemental Solutions <cms:get_custom_field 'address' masterpage='globals.php' />
+                  <br/>Phone: <cms:get_custom_field 'phone' masterpage='globals.php' />
+                  <br/>Owner contact email: <cms:get_custom_field 'owner_email' masterpage='globals.php' /></p>
                   <hr>
                   <h3>Types of Data collected</h3>
                   <p>Among the types of Personal Data that this Application collects, by itself or through third parties, there are: first name, last name, phone number, company name, address, email address, various types of Data, website, Cookies and Usage Data.

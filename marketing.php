@@ -262,9 +262,9 @@
           <p class="h5">Are you looking for a marketing resource that can help your brand become more recognised?
             <br />
             <span>
-              <i class="fa fa-phone"></i> 0808 168 6426</span> &nbsp;
+              <i class="fa fa-phone"></i> <cms:get_custom_field 'phone' masterpage='globals.php' /></span> &nbsp;
             <span>
-              <i class="fa fa-envelope"></i> hello@weareelemental.uk</span>
+              <i class="fa fa-envelope"></i> <cms:get_custom_field 'email' masterpage='globals.php' /></span>
           </p>
         </div>
         <div class="col-md-3">

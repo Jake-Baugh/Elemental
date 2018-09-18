@@ -44,7 +44,7 @@
       
         <div class="ml-auto menu-info d-none d-lg-block">
         <div class=" d-inline-block contact-info">
-          <p>Phone: 0808 168 6426</p>
+          <p>Phone: <cms:get_custom_field 'phone' masterpage='globals.php' />0808 168 6426</p>
           <p>Email: hello@weareelemental.uk</p>
         </div>
      
@@ -272,9 +272,9 @@
           <p class="h5">Are you being let down by outdated, erroneous B2B marketing contact data?
             <br />
             <span>
-              <i class="fa fa-phone"></i> 0808 168 6426</span> &nbsp;
+              <i class="fa fa-phone"></i> <cms:get_custom_field 'phone' masterpage='globals.php' /></span> &nbsp;
             <span>
-              <i class="fa fa-envelope"></i> hello@weareelemental.uk</span>
+              <i class="fa fa-envelope"></i> <cms:get_custom_field 'email' masterpage='globals.php' /></span>
           </p>
         </div>
         <div class="col-md-3">

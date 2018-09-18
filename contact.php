@@ -57,14 +57,14 @@
    <div class="row pt-3">
           <div class="col-6">
             <div class="d-inline-block">
-              <p>Phone <i class="fas fa-phone"></i> : 0808 168 6426</p>
-              <p>Email <i class="fas fa-envelope"></i> : hello@weareelemental.uk</p>
+              <p>Phone <i class="fas fa-phone"></i> : <cms:get_custom_field 'phone' masterpage='globals.php' /></p>
+              <p>Email <i class="fas fa-envelope"></i> : <cms:get_custom_field 'email' masterpage='globals.php' /></p>
             </div>
           </div>
           <div class="col-6">
             <div class="d-inline-block">
-              <p>Twitter <i class="fab fa-twitter"></i> : @WeAreElemental_</p>
-              <p>Linkedin <i class="fab fa-linkedin-in"></i> : WeAreElemental</p>
+              <p>Twitter <i class="fab fa-twitter"></i> : <cms:get_custom_field 'twitter_hdl' masterpage='globals.php' />@WeAreElemental_</p>
+              <p>Linkedin <i class="fab fa-linkedin-in"></i> : <cms:get_custom_field 'linkedin_name' masterpage='globals.php' />WeAreElemental</p>
             </div>
           </div>
           </div>

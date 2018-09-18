@@ -274,9 +274,9 @@
           <p class="h5">Get in front of the qualified decision-makers that will help you hit targets.
             <br />
             <span>
-              <i class="fa fa-phone"></i> 0808 168 6426</span> &nbsp;
+              <i class="fa fa-phone"></i> <cms:get_custom_field 'phone' masterpage='globals.php' /></span> &nbsp;
             <span>
-              <i class="fa fa-envelope"></i> hello@weareelemental.uk</span>
+              <i class="fa fa-envelope"></i> <cms:get_custom_field 'email' masterpage='globals.php' /></span>
           </p>
         </div>
         <div class="col-md-3">
