@@ -78,7 +78,7 @@
               <div class="col-md-8 col-md-offset-2 m-auto">
                   <div class="contact-form">
                     <h1>Get in Touch</h1>
-                    <cms:form action='' method='post'>
+                    <cms:form action="<cms:link 'contact.php' />" method='post' >
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group">
