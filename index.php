@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="google-site-verification" content="5RXtX_Oa7p639IdhNq5cyTzX8KXE-RMFP8JYpSbeJw0" />
 
   <title>We Are Elemental</title>
 
