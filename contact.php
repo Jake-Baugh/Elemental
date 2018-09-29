@@ -63,8 +63,8 @@
           </div>
           <div class="col-6">
             <div class="d-inline-block">
-              <p>Twitter <i class="fab fa-twitter"></i> : <cms:get_custom_field 'twitter_hdl' masterpage='globals.php' />@WeAreElemental_</p>
-              <p>Linkedin <i class="fab fa-linkedin-in"></i> : <cms:get_custom_field 'linkedin_name' masterpage='globals.php' />WeAreElemental</p>
+              <p>Twitter <i class="fab fa-twitter"></i> : <cms:get_custom_field 'twitter_hdl' masterpage='globals.php' /></p>
+              <p>Linkedin <i class="fab fa-linkedin-in"></i> : <cms:get_custom_field 'linkedin_name' masterpage='globals.php' /></p>
             </div>
           </div>
           </div>
