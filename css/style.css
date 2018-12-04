@@ -219,6 +219,11 @@ a {
  #bg-about { background-image: url("../img/bg-about.jpg");}
  #bg-news { background-image: url("../img/bg-news.jpg");}
 
+
+ #bg-landing { background-image: url("../img/bg-landing.jpg");}
+ #bg-landing:after { background: rgba(0, 0, 0, 0);}
+
+
  #bg-s1 { background-image: url("../img/bg-s1.jpg");background-position: center center;
     background-repeat: no-repeat;
     background-size: cover}
@@ -541,10 +546,10 @@ a {
 }
 .carousel .item {
 	color: #999;
-	overflow: hidden;
+
     min-height: 120px;
     font-size: 18px;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: .25rem;
     padding: 30px;
 }
@@ -663,6 +668,10 @@ a {
  .bg-primary {
      background-color: #1d809f !important
  }
+
+ .bg-landing {
+    background-color: #00090c !important
+}
 
  .bg-earth20 {
     background-color: #ebf1ef !important
