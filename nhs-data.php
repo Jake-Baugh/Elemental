@@ -27,7 +27,7 @@
 
     $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
     $list_id = '38c02caab7'; // mailchimp list id
-    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:us13'; // mailchimp api key
+    $api_key = '7f08e04419c9fd6ff9c6091bab6a963e-us13'; // mailchimp api key
     $merge_fields = array('MMERGE6' => $name, 'PHONE' => $phone, 'MMERGE5' => $org);
 
 
@@ -39,8 +39,27 @@
     $result = mailchimp_subscriber_status( $email, $status, $list_id, $api_key, $merge_fields );              
     return $result;
     }
-?>
 
+  file_put_contents('php://stderr', print_r('before post check ', TRUE));
+  if(isset($_POST['hid_enquire']) && !empty($_POST['hid_enquire'])) {
+
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $phone=$_POST['phone'];
+    $org=$_POST['organisation'];
+
+    file_put_contents('php://stderr', print_r($email, TRUE));
+    file_put_contents('php://stderr', print_r($name, TRUE));
+    file_put_contents('php://stderr', print_r($phone, TRUE));
+    file_put_contents('php://stderr', print_r($org, TRUE));
+
+    $result = mailchimp_setup( $email , $name, $phone, $org );
+
+    file_put_contents('php://stderr', print_r($result, TRUE));
+
+    $mc_subscribe = true;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,13 +90,12 @@
     <link href="css/style.css" rel="stylesheet">
 
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/landing.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://www.jasny.net/bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top landing-top">
+<body id="page-top">
 
     <div class="navbar navbar-dark navbar-default navbar-fixed-top">
         <div class="container my-auto">
@@ -92,8 +110,8 @@
 
     <!-- Header -->
     <header class="masthead d-flex" id="bg-landing">
-        <div class="container my-auto">
-            <div class="col-lg-6 col-md-6 col-sm-7 landing-block mt-80">
+        <div class="container mt-60">
+            <div class="col-lg-6 col-md-6 col-sm-7 landing-block">
                 <div class="landing-title text-white">
                     <h2>Flexible, affordable NHS sales data and market intelligence
                     </h2>
@@ -112,30 +130,15 @@
             <div class="col-lg-6 col-md-6 col-sm-5 mt-4">
                 <div class="login-form fixed-form d-none d-md-block">
                     <a name="enquire1"></a>
-<?php
-
-  file_put_contents('php://stderr', print_r('before post check ', TRUE));
-  if(isset($_POST['hid_enquire1']) && !empty($_POST['hid_enquire1'])) {
-
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $phone=$_POST['phone'];
-    $org=$_POST['organisation'];
-
-    file_put_contents('php://stderr', print_r($email, TRUE));
-    file_put_contents('php://stderr', print_r($name, TRUE));
-    file_put_contents('php://stderr', print_r($phone, TRUE));
-    file_put_contents('php://stderr', print_r($org, TRUE));
-
-    $result = mailchimp_setup( $email , $name, $phone, $org );
-
-    file_put_contents('php://stderr', print_r($result, TRUE));
-
-    echo '<h1>Success !</h1>';
-
-} else {
-?>
                     <form action="#enquire1" method="post">
+
+<?php 
+    if ( isset($mc_subscribe) && $mc_subscribe) {
+      file_put_contents('php://stderr', print_r(' Subscribed !', TRUE));
+    echo '<h2 class="text-center">Thanks for subscribing ! </h2>';
+    }
+    else {
+?>
 
                         <h2 class="text-center">Enquire today and get
                             10% off your order*</h2>
@@ -152,14 +155,14 @@
                         <div class="form-group">
                             <input type="phone" class="form-control" name="phone" placeholder="Telephone" required="required">
                         </div>
-                        <input type="hidden" name="hid_enquire1" id="hid_enquire1" value="subscribe">
+                        <input type="hidden" name="hid_enquire" id="hid_enquire" value="subscribe">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Enquire Now</button>
                         </div>
-                    </form>
 <?php
-  }
+    }
 ?>
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -181,12 +184,11 @@
                                     <div class="media">
                                         <div class="col-md-12">
                                             <div class="testimonial text-white">
-                                            <h3 class="text-earth">Supporting Sales</h3>
                                                 <img src="img/0.jpeg" class="avatar" />
-                                                <p><i>“The data sourced and created by Elemental has enabled us to target
+                                                <p>“The data sourced and created by Elemental has enabled us to target
                                                     opportunities within NHS trusts for the validation of LIMS, and is
                                                     supporting our sales efforts by ensuring we prioritise qualified
-                                                    prospects.”</i></p>
+                                                    prospects.”</p>
                                                 <p class="overview">
                                                     <b class="text-earth">Stephen Seagreen-Bell</b>, Managing Director,
                                                     THC</p>
@@ -216,23 +218,26 @@
 
                     </div>
                     <ul class="p_plan_list">
-                        <li><i class="fa fa-user" aria-hidden="true"></i>&emsp;5x named contacts per organisation:</li>
+                        <li><i class="fa fa-user" aria-hidden="true"></i>&emsp;5x named contacts per:</li>
+                        <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;Organisation</li>
                         <li><i class="fa fa-briefcase-medical" aria-hidden="true"></i>&emsp;Job role</li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>&emsp;Email address</li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number: (direct dial where possible)</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number</li>
                     </ul>
-                
+                </div>
                 <div class="b-price-plan">
-                <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Basic+</div>
-
+                    <div class="b-price-plan__item b-price-plan__head">
+                        <h3>Basic +</h3>
                     </div>
                     <ul class="p_plan_list">
-                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
                     </ul>
+                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="text-white">Contact us for pricing</div>
+
+                    </div>
                 </div>
-                </div>
-            
+            </div>
         </div>
 
     </section>
@@ -240,13 +245,13 @@
     <section class="landing-section content-section bg-landing">
         <div class="container mt-60">
             <div class="col-lg-6 col-md-6 landing-block">
-                <div class="b-price-plan">
+                <div class="b-price-plan" id="earth">
                     <div class="b-price-plan__item b-price-plan__head">
-                        <h3>Intermediate</h3>
+                        <h3 class="text-white">Intermediate</h3>
                     </div>
-                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="cost-time text-white">From</div>
-                        <div class="cost-title text-white">500<span>00</span></div>
+                    <div class="b-price-plan__item b-price-plan__cost bg-light">
+                        <div class="cost-time">From</div>
+                        <div class="cost-title">500<span>00</span></div>
 
                     </div>
                     <ul class="p_plan_list">
@@ -260,15 +265,18 @@
                         <li><i class="fa fa-file" aria-hidden="true"></i>&emsp;Install and contract end dates</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Purchasing decision-maker</li>
                     </ul>
-                    <div class="b-price-plan">
-                <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Intermediate+</div>
-
+                </div>
+                <div class="b-price-plan">
+                    <div class="b-price-plan__item b-price-plan__head" id="earth">
+                        <h3 class="text-white">Intermediate +</h3>
                     </div>
                     <ul class="p_plan_list">
-                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
                     </ul>
-                </div>
+                    <div class="b-price-plan__item b-price-plan__cost">
+                        <div>Contact us for pricing</div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,15 +302,18 @@
                         <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;NHS organisation financial data</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Tailored sales plan</li>
                     </ul>
-                    <div class="b-price-plan">
-                <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Advanced+</div>
-
+                </div>
+                <div class="b-price-plan">
+                    <div class="b-price-plan__item b-price-plan__head">
+                        <h3>Advanced +</h3>
                     </div>
                     <ul class="p_plan_list">
-                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data and report revalidated every three months</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Data and report revalidated every three months</li>
                     </ul>
-                </div>
+                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="text-white">Contact us for pricing</div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -314,29 +325,15 @@
             <div class="col">
             <div class="login-form d-md-none d-lg-none d-sm-none d-xs-block">
                     <a name="enquire2"></a>
-<?php
-
-  file_put_contents('php://stderr', print_r('before post check ', TRUE));
-  if(isset($_POST['hid_enquire2']) && !empty($_POST['hid_enquire2'])) {
-
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $phone=$_POST['phone'];
-    $org=$_POST['organisation'];
-
-    file_put_contents('php://stderr', print_r($email, TRUE));
-    file_put_contents('php://stderr', print_r($name, TRUE));
-    file_put_contents('php://stderr', print_r($phone, TRUE));
-    file_put_contents('php://stderr', print_r($org, TRUE));
-
-    $result = mailchimp_setup( $email , $name, $phone, $org );
-
-    file_put_contents('php://stderr', print_r($result, TRUE));
-
-} else {
-?>
                     <form action="#enquire2" method="post">
 
+<?php
+      if ( isset($mc_subscribe) && $mc_subscribe) {
+              file_put_contents('php://stderr', print_r(' Subscribed !', TRUE));
+                  echo '<h2 class="text-center">Thanks for subscribing ! </h2>';
+                  }
+    else {
+?>
                         <h2 class="text-center">Enquire today and get
                             10% off your order*</h2>
                         <div class="form-group">
@@ -352,14 +349,14 @@
                         <div class="form-group">
                             <input type="phone" class="form-control" name="phone" placeholder="Telephone" required="required">
                         </div>
-                        <input type="hidden" name="hid_enquire2" id="hid_enquire2" value="subscribe">
+                        <input type="hidden" name="hid_enquire" id="hid_enquire" value="subscribe">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Enquire Now</button>
                         </div>
-                    </form>
 <?php
   }
 ?>
+                    </form>
                 </div>
             </div>
         </div>
