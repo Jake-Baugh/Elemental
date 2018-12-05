@@ -110,8 +110,8 @@
 
     <!-- Header -->
     <header class="masthead d-flex" id="bg-landing">
-        <div class="container mt-60">
-            <div class="col-lg-6 col-md-6 col-sm-7 landing-block">
+        <div class="container my-auto">
+            <div class="col-lg-6 col-md-6 col-sm-7 landing-block mt-80">
                 <div class="landing-title text-white">
                     <h2>Flexible, affordable NHS sales data and market intelligence
                     </h2>
@@ -135,7 +135,11 @@
 <?php 
     if ( isset($mc_subscribe) && $mc_subscribe) {
       file_put_contents('php://stderr', print_r(' Subscribed !', TRUE));
-    echo '<h2 class="text-center">Thanks for subscribing ! </h2>';
+    echo '<h2>Thank you for your enquiry.</h2>
+
+    <p>We have sent you a confirmation email and a member of our team will be in touch shortly.</p>
+    
+    <p>In a hurry? Call us on 0808 168 6426 today</p>';
     }
     else {
 ?>
@@ -222,21 +226,18 @@
                         <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;Organisation</li>
                         <li><i class="fa fa-briefcase-medical" aria-hidden="true"></i>&emsp;Job role</li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>&emsp;Email address</li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number</li>
-                    </ul>
-                </div>
-                <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head">
-                        <h3>Basic +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Contact us for pricing</div>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number: (direct dial where possible)</li>
 
-                    </div>
-                </div>
+                    </ul>
+                <div class="b-price-plan">
+                                       <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                     <div class="text-white">Basic+</div>
+
+                     </div>
+                     <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                     </ul>
+               </div>
             </div>
         </div>
 
@@ -265,19 +266,16 @@
                         <li><i class="fa fa-file" aria-hidden="true"></i>&emsp;Install and contract end dates</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Purchasing decision-maker</li>
                     </ul>
-                </div>
-                <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head" id="earth">
-                        <h3 class="text-white">Intermediate +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost">
-                        <div>Contact us for pricing</div>
+                     <div class="b-price-plan">
+                                       <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                     <div class="text-white">Intermediate+</div>
 
-                    </div>
-                </div>
+                     </div>
+                     <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                     </ul>
+               </div>
+
             </div>
         </div>
 
@@ -302,19 +300,15 @@
                         <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;NHS organisation financial data</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Tailored sales plan</li>
                     </ul>
-                </div>
-                <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head">
-                        <h3>Advanced +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data and report revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Contact us for pricing</div>
+                    <div class="b-price-plan">
+                                       <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                     <div class="text-white">Advanced+</div>
 
-                    </div>
-                </div>
+                     </div>
+                     <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                     </ul>
+               </div>
             </div>
         </div>
 
@@ -330,7 +324,11 @@
 <?php
       if ( isset($mc_subscribe) && $mc_subscribe) {
               file_put_contents('php://stderr', print_r(' Subscribed !', TRUE));
-                  echo '<h2 class="text-center">Thanks for subscribing ! </h2>';
+                  echo '<h2>Thank you for your enquiry.</h2>
+
+                  <p>We have sent you a confirmation email and a member of our team will be in touch shortly.</p>
+                  
+                  <p>In a hurry? Call us on 0808 168 6426 today</p>';
                   }
     else {
 ?>
