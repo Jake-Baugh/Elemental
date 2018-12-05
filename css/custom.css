@@ -206,7 +206,7 @@ height: 600px;
   
 }
 .landing-title ul li{
-  padding-bottom:10px;
+  padding-bottom:10px;font-size: 1.2rem;
   list-style-type: none;
 }
 
@@ -379,7 +379,7 @@ height: 600px;
 
 .b-price-plan{
 	border: 1px solid rgba(125,138,164,.25);
-	margin: 0 auto 30px auto;
+	/* margin: 0 auto 30px auto; */
 	background: #fff;	
 	-webkit-border-radius: 5px;
 	        border-radius: 5px;

@@ -55,12 +55,13 @@
     <link href="css/style.css" rel="stylesheet">
 
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://www.jasny.net/bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top">
+<body id="page-top landing-top">
 
     <div class="navbar navbar-dark navbar-default navbar-fixed-top">
         <div class="container my-auto">
@@ -164,11 +165,12 @@
                                     <div class="media">
                                         <div class="col-md-12">
                                             <div class="testimonial text-white">
+                                            <h3 class="text-earth">Supporting Sales</h3>
                                                 <img src="img/0.jpeg" class="avatar" />
-                                                <p>“The data sourced and created by Elemental has enabled us to target
+                                                <p><i>“The data sourced and created by Elemental has enabled us to target
                                                     opportunities within NHS trusts for the validation of LIMS, and is
                                                     supporting our sales efforts by ensuring we prioritise qualified
-                                                    prospects.”</p>
+                                                    prospects.”</i></p>
                                                 <p class="overview">
                                                     <b class="text-earth">Stephen Seagreen-Bell</b>, Managing Director,
                                                     THC</p>
@@ -198,26 +200,23 @@
 
                     </div>
                     <ul class="p_plan_list">
-                        <li><i class="fa fa-user" aria-hidden="true"></i>&emsp;5x named contacts per:</li>
-                        <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;Organisation</li>
+                        <li><i class="fa fa-user" aria-hidden="true"></i>&emsp;5x named contacts per organisation:</li>
                         <li><i class="fa fa-briefcase-medical" aria-hidden="true"></i>&emsp;Job role</li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>&emsp;Email address</li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number</li>
                     </ul>
-                </div>
+                
                 <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head">
-                        <h3>Basic +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Contact us for pricing</div>
+                <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="text-white">Basic+</div>
 
                     </div>
+                    <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                    </ul>
                 </div>
-            </div>
+                </div>
+            
         </div>
 
     </section>
@@ -225,13 +224,13 @@
     <section class="landing-section content-section bg-landing">
         <div class="container mt-60">
             <div class="col-lg-6 col-md-6 landing-block">
-                <div class="b-price-plan" id="earth">
+                <div class="b-price-plan">
                     <div class="b-price-plan__item b-price-plan__head">
-                        <h3 class="text-white">Intermediate</h3>
+                        <h3>Intermediate</h3>
                     </div>
-                    <div class="b-price-plan__item b-price-plan__cost bg-light">
-                        <div class="cost-time">From</div>
-                        <div class="cost-title">500<span>00</span></div>
+                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="cost-time text-white">From</div>
+                        <div class="cost-title text-white">500<span>00</span></div>
 
                     </div>
                     <ul class="p_plan_list">
@@ -245,18 +244,15 @@
                         <li><i class="fa fa-file" aria-hidden="true"></i>&emsp;Install and contract end dates</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Purchasing decision-maker</li>
                     </ul>
-                </div>
-                <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head" id="earth">
-                        <h3 class="text-white">Intermediate +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost">
-                        <div>Contact us for pricing</div>
+                    <div class="b-price-plan">
+                <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="text-white">Intermediate+</div>
 
                     </div>
+                    <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data revalidated every three months</li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>
