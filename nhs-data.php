@@ -106,7 +106,7 @@
     $ORG=$_POST['organisation'];
     $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
     $list_id = '38c02caab7'; // mailchimp list id
-    $api_key = 'f2574814d16a7f419f7f80f64941823a-us13'; // mailchimp api key
+    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-us13'; // mailchimp api key
     $merge_fields = array('MMERGE6' => $NAME, 'PHONE' => $PHONE, 'MMERGE5' => $ORG);
 
 
