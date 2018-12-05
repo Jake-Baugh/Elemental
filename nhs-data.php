@@ -27,7 +27,7 @@
 
     $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
     $list_id = '38c02caab7'; // mailchimp list id
-    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-us13'; // mailchimp api key
+    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:us13'; // mailchimp api key
     $merge_fields = array('MMERGE6' => $name, 'PHONE' => $phone, 'MMERGE5' => $org);
 
 
@@ -129,6 +129,8 @@
     $result = mailchimp_setup( $email , $name, $phone, $org );
 
     file_put_contents('php://stderr', print_r($result, TRUE));
+
+    echo '<h1>Success !</h1>';
 
 } else {
 ?>
