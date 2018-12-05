@@ -1,28 +1,44 @@
 <?php
 
-  function mailchimp_subscriber_status($email, $status, $list_id, $api_key, $merge_fields = array('FNAME'=> '', 'FPHONE'=> '', 'FMSG'=> ''))
-  {
-      $data = array(
+  function mailchimp_subscriber_status( $email, $status, $list_id, $api_key, $merge_fields = array('FNAME'=> '', 'FPHONE'=> '', 'FMSG'=> '') ){
+    $data = array(
          'apikey'        => $api_key,
          'email_address' => $email,
          'status'        => $status,
          'merge_fields'  => $merge_fields
     );
-      $mch_api = curl_init(); // initialize cURL connection
+ $mch_api = curl_init(); // initialize cURL connection
 
-      curl_setopt($mch_api, CURLOPT_URL, 'https://' . substr($api_key, strpos($api_key, '-')+1) . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/' . md5(strtolower($data['email_address'])));
-      curl_setopt($mch_api, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Authorization: Basic '.base64_encode('user:'.$api_key)));
-      curl_setopt($mch_api, CURLOPT_USERAGENT, 'PHP-MCAPI/2.0');
-      curl_setopt($mch_api, CURLOPT_RETURNTRANSFER, true); // return the API response
+    curl_setopt($mch_api, CURLOPT_URL, 'https://' . substr($api_key,strpos($api_key,'-')+1) . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/' . md5(strtolower($data['email_address'])));
+    curl_setopt($mch_api, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Authorization: Basic '.base64_encode( 'user:'.$api_key )));
+    curl_setopt($mch_api, CURLOPT_USERAGENT, 'PHP-MCAPI/2.0');
+    curl_setopt($mch_api, CURLOPT_RETURNTRANSFER, true); // return the API response
     curl_setopt($mch_api, CURLOPT_CUSTOMREQUEST, 'PUT'); // method PUT
     curl_setopt($mch_api, CURLOPT_TIMEOUT, 10);
-      curl_setopt($mch_api, CURLOPT_POST, true);
-      curl_setopt($mch_api, CURLOPT_SSL_VERIFYPEER, false);
-      curl_setopt($mch_api, CURLOPT_POSTFIELDS, json_encode($data)); // send data in json
+    curl_setopt($mch_api, CURLOPT_POST, true);
+    curl_setopt($mch_api, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($mch_api, CURLOPT_POSTFIELDS, json_encode($data) ); // send data in json
 
-      $result = curl_exec($mch_api);
+    $result = curl_exec($mch_api);
       return $result;
-  }
+    }
+
+    function mailchimp_setup( $email, $name, $phone, $org ) {
+
+    $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
+    $list_id = '38c02caab7'; // mailchimp list id
+    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:us13'; // mailchimp api key
+    $merge_fields = array('MMERGE6' => $name, 'PHONE' => $phone, 'MMERGE5' => $org);
+
+
+    file_put_contents('php://stderr', print_r($email, TRUE));
+    file_put_contents('php://stderr', print_r($name, TRUE));
+    file_put_contents('php://stderr', print_r($phone, TRUE));
+    file_put_contents('php://stderr', print_r($org, TRUE));
+
+    $result = mailchimp_subscriber_status( $email, $status, $list_id, $api_key, $merge_fields );              
+    return $result;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -98,27 +114,27 @@
                     <a name="enquire1"></a>
 <?php
 
-  file_put_contents('php://stderr', print_r('before post check ', true));
-  if (isset($_POST['hid_enquire1']) && !empty($_POST['hid_enquire1'])) {
-      $email = $_POST['email'];
-      $NAME = $_POST['name'];
-      $PHONE=$_POST['phone'];
-      $ORG=$_POST['organisation'];
-      $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
-    $list_id = '38c02caab7'; // mailchimp list id
-    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-us13'; // mailchimp api key
-    $merge_fields = array('MMERGE6' => $NAME, 'PHONE' => $PHONE, 'MMERGE5' => $ORG);
+  file_put_contents('php://stderr', print_r('before post check ', TRUE));
+  if(isset($_POST['hid_enquire1']) && !empty($_POST['hid_enquire1'])) {
 
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $phone=$_POST['phone'];
+    $org=$_POST['organisation'];
 
-      file_put_contents('php://stderr', print_r($email, true));
-      file_put_contents('php://stderr', print_r($NAME, true));
-      file_put_contents('php://stderr', print_r($PHONE, true));
-      file_put_contents('php://stderr', print_r($ORG, true));
+    file_put_contents('php://stderr', print_r($email, TRUE));
+    file_put_contents('php://stderr', print_r($name, TRUE));
+    file_put_contents('php://stderr', print_r($phone, TRUE));
+    file_put_contents('php://stderr', print_r($org, TRUE));
 
-      $result = mailchimp_subscriber_status($email, $status, $list_id, $api_key, $merge_fields);
-      file_put_contents('php://stderr', print_r($result, true));
-  } else {
-      ?>
+    $result = mailchimp_setup( $email , $name, $phone, $org );
+
+    file_put_contents('php://stderr', print_r($result, TRUE));
+
+    echo '<h1>Success !</h1>';
+
+} else {
+?>
                     <form action="#enquire1" method="post">
 
                         <h2 class="text-center">Enquire today and get
@@ -301,29 +317,27 @@
             <div class="col">
             <div class="login-form d-md-none d-lg-none d-sm-none d-xs-block">
                     <a name="enquire2"></a>
-                    <?php
+<?php
 
-  file_put_contents('php://stderr', print_r('before post check ', true));
-  if (isset($_POST['hid_enquire2']) && !empty($_POST['hid_enquire2'])) {
-      $email = $_POST['email'];
-      $NAME = $_POST['name'];
-      $PHONE=$_POST['phone'];
-      $ORG=$_POST['organisation'];
-      $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
-    $list_id = '38c02caab7'; // mailchimp list id
-    $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-us13'; // mailchimp api key
-    $merge_fields = array('MMERGE6' => $NAME, 'PHONE' => $PHONE, 'MMERGE5' => $ORG);
+  file_put_contents('php://stderr', print_r('before post check ', TRUE));
+  if(isset($_POST['hid_enquire2']) && !empty($_POST['hid_enquire2'])) {
 
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $phone=$_POST['phone'];
+    $org=$_POST['organisation'];
 
-      file_put_contents('php://stderr', print_r($email, true));
-      file_put_contents('php://stderr', print_r($NAME, true));
-      file_put_contents('php://stderr', print_r($PHONE, true));
-      file_put_contents('php://stderr', print_r($ORG, true));
+    file_put_contents('php://stderr', print_r($email, TRUE));
+    file_put_contents('php://stderr', print_r($name, TRUE));
+    file_put_contents('php://stderr', print_r($phone, TRUE));
+    file_put_contents('php://stderr', print_r($org, TRUE));
 
-      $result = mailchimp_subscriber_status($email, $status, $list_id, $api_key, $merge_fields);
-      file_put_contents('php://stderr', print_r($result, true));
-  } else {
-      ?>
+    $result = mailchimp_setup( $email , $name, $phone, $org );
+
+    file_put_contents('php://stderr', print_r($result, TRUE));
+
+} else {
+?>
                     <form action="#enquire2" method="post">
 
                         <h2 class="text-center">Enquire today and get
@@ -341,11 +355,12 @@
                         <div class="form-group">
                             <input type="phone" class="form-control" name="phone" placeholder="Telephone" required="required">
                         </div>
+                        <input type="hidden" name="hid_enquire2" id="hid_enquire2" value="subscribe">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Enquire Now</button>
                         </div>
                     </form>
-                    <?php
+<?php
   }
 ?>
                 </div>
