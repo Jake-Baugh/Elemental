@@ -88,8 +88,8 @@
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
-
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://www.jasny.net/bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet">
 
