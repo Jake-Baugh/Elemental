@@ -92,8 +92,8 @@
 
     <!-- Header -->
     <header class="masthead d-flex" id="bg-landing">
-        <div class="container mt-60">
-            <div class="col-lg-6 col-md-6 col-sm-7 landing-block">
+        <div class="container my-auto">
+            <div class="col-lg-6 col-md-6 col-sm-7 landing-block mt-80">
                 <div class="landing-title text-white">
                     <h2>Flexible, affordable NHS sales data and market intelligence
                     </h2>
@@ -219,7 +219,7 @@
                         <li><i class="fa fa-user" aria-hidden="true"></i>&emsp;5x named contacts per organisation:</li>
                         <li><i class="fa fa-briefcase-medical" aria-hidden="true"></i>&emsp;Job role</li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>&emsp;Email address</li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>&emsp;Telephone number: (direct dial where possible)</li>
                     </ul>
                 
                 <div class="b-price-plan">
@@ -294,18 +294,15 @@
                         <li><i class="fa fa-hospital-alt" aria-hidden="true"></i>&emsp;NHS organisation financial data</li>
                         <li><i class="fa fa-pound-sign" aria-hidden="true"></i>&emsp;Tailored sales plan</li>
                     </ul>
-                </div>
-                <div class="b-price-plan">
-                    <div class="b-price-plan__item b-price-plan__head">
-                        <h3>Advanced +</h3>
-                    </div>
-                    <ul class="p_plan_list">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Data and report revalidated every three months</li>
-                    </ul>
-                    <div class="b-price-plan__item b-price-plan__cost" id="earth">
-                        <div class="text-white">Contact us for pricing</div>
+                    <div class="b-price-plan">
+                <div class="b-price-plan__item b-price-plan__cost" id="earth">
+                        <div class="text-white">Advanced+</div>
 
                     </div>
+                    <ul class="p_plan_list">
+                        <li><i class="fa fa-plus" aria-hidden="true"></i>&emsp;Data and report revalidated every three months</li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>

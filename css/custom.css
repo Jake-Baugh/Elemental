@@ -184,8 +184,8 @@ height: 600px;
   }
 }
 
-.mt-60 {
-  margin-top:60px;
+.mt-80 {
+  margin-top:80px;
 }
 
 .landing-block {
@@ -217,7 +217,7 @@ height: 600px;
 
 .landing-section .carousel .avatar{
   border-radius:50%;
-  margin: 10px 0 30px 0;width: 120px;
+  margin: 30px 0 30px 0;width: 120px;
 }
 
 .form-control {
@@ -237,8 +237,9 @@ height: 600px;
 }
 .fixed-form {
   position: fixed;
-  top: 20%;
-  right: 8%;
+  top: 50%;
+  left: 50%;
+margin-top: -200px; /* Negative half of height. */; margin-left: 180px; /* Negative half of width. */
 }
   .login-form form {
   color: #999;
